@@ -34,7 +34,7 @@ I'm John Valai &nbsp; ▲ Full Stack Engineer &nbsp; ▲ Designer</h3>
 ▲ An open source MacOS desktop app that lets one machine remotely control the other's screen and sound properties, using the UDP protocol, NWJS, and NodeJS
 
 -->
-<p align="center"> 
+<p align="left"> 
 <a href="https://github.com/anuraghazra/github-readme-stats">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=jv-k&hide=stars&include_all_commits=true&count_private=true&show_icons=true&hide_border=true&theme=dark" />
 </a>
