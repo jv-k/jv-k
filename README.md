@@ -1,4 +1,11 @@
-### Hi! 👋
+<!--
+**jv-k/jv-k** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+-->
+
+<h3> 👋 Hi there <br />
+I'm John Valai<br />
+a Full Stack Engineer, and Creative</h3>
+
 About me:
 ▲ My programming days started back in the mid 90s  
 ▲ I'm largely self-taught, although I took CS classes for a few years for my masters course in Cybernetics, robotics and engineering  
@@ -19,24 +26,12 @@ About me:
 
 ### 🔭 Currently working on:  
 ▲ An open source MacOS desktop app that lets one machine remotely control the other's screen and sound properties, using the UDP protocol, NWJS, and NodeJS
-<!--
-**jv-k/jv-k** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
-
-https://github.com/anuraghazra/github-readme-stats#customization
--->
-![Screenshot](https://github-readme-stats.vercel.app/api/top-langs/?username=jv-k&layout=compact&hide_border=true&theme=dark)  
-
-![Screenshot](https://github-readme-stats.vercel.app/api?username=jv-k&hide=stars&include_all_commits=true&count_private=true&show_icons=true&hide_border=true&theme=dark)  
+<a href="https://github.com/anuraghazra/github-readme-stats">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jv-k&layout=compact&hide_border=true&theme=dark" />
+</a>
+<a href="https://github.com/anuraghazra/github-readme-stats">
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=jv-k&hide=stars&include_all_commits=true&count_private=true&show_icons=true&hide_border=true&theme=dark" />
+</a>
 
 
