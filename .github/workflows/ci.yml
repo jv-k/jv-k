@@ -1,0 +1,90 @@
+name: Generate Icons
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  test_yaml:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Update packages
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y git
+
+      - name: Install NPM packages
+        run: npm install
+
+      - name: Test Yaml stack data
+        run: npm run test:yaml
+
+  build:
+    name: Build readme.md
+    needs: test_yaml
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Install NPM packages
+        run: npm install
+
+      - name: Build readme.md
+        run: |
+          npm run build
+          cat ./build/readme.md
+
+      # save artifact for next job
+      - uses: actions/upload-artifact@v3
+        with:
+          name: readme-artifact
+          path: ./build/readme.md
+
+  commit_changes:
+    name: Commit changes back to repo
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+        # grab previous artifact, save it in repo root
+      - uses: actions/download-artifact@v3
+        with:
+          name: readme-artifact
+          path: ./
+
+      - name: Update packages
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y git
+
+      - name: Configure git to trust the workspace despite the different owner
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Copy the name & email from the last commit
+        run: |
+          git config --local user.email "$(git log --format='%ae' HEAD^\!)"
+          git config --local user.name "$(git log --format='%an' HEAD^\!)"
+
+      - name: Commit stage, commit and push files
+        run: |
+          cat ./readme.md
+          remote_repo='https://${{ github.actor }}:${{ github.token }}@github.com/${{ github.repository }}.git'
+          git add readme.md
+          git commit -m "docs: update skills icons"
+          git push "${remote_repo}" "HEAD:${{ github.ref }}"
+
+      - name: Display Results
+        run: |
+          git show --summary

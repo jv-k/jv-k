@@ -1,0 +1,187 @@
+Skillset:
+  Languages:
+    - name: javascript
+      color: '#F7DF1E'
+      url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+    - name: typescript
+      color: '#3178C6'
+      url: https://www.typescriptlang.org/
+    - name: c
+      color: '#A8B9CC'
+      url: ''
+    - name: csharp
+      color: '#239120'
+      url: https://www.w3schools.com/cs/
+    - name: cplusplus
+      color: '#00599C'
+      url: https://www.w3schools.com/cpp/
+    - name: coffeescript
+      color: '#2F2625'
+      url: ''
+    - name: php
+      color: '#777BB4'
+      url: https://www.php.net
+    - name: python
+      color: '#3776AB'
+      url: https://www.python.org
+  DevOps:
+    - name: gnubash
+      color: '#4EAA25'
+      url: ''
+    - name: git
+      color: '#F05032'
+      url: ''
+    - name: github
+      color: '#181717'
+      url: ''
+    - name: docker
+      color: '#2496ED'
+      url: ''
+    - name: kubernetes
+      color: '#326CE5'
+      url: ''
+    - name: vagrant
+      color: '#1868F2'
+      url: ''
+  DBs:
+    - name: mongodb
+      color: '#47A248'
+      url: ''
+    - name: mysql
+      color: '#4479A1'
+      url: ''
+  Cloud:
+    - name: microsoftazure
+      color: '#0078D4'
+      url: ''
+    - name: amazonaws
+      color: '#232F3E'
+      url: ''
+  BackEnd:
+    - name: nodedotjs
+      color: '#339933'
+      url: ''
+    - name: django
+      color: '#092E20'
+      url: ''
+    - name: express
+      color: '#000000'
+      url: ''
+    - name: flask
+      color: '#000000'
+      url: ''
+    - name: laravel
+      color: '#FF2D20'
+      url: ''
+    - name: composer
+      color: '#885630'
+      url: ''
+    - name: webpack
+      color: '#885630'
+      url: https://webpack.js.org
+    - name: grunt
+      color: '#FAA918'
+      url: ''
+    - name: gulp
+      color: '#CF4647'
+      url: ''
+    - name: backbonedotjs
+      color: '#0071B5'
+      url: https://backbonejs.org
+    - name: gulp
+      color: '#CF4647'
+      url: https://gulpjs.com
+    - name: grunt
+      color: '#FAA918'
+      url: ''
+    - name: bower
+      color: '#EF5734'
+      url: https://bower.io/
+    - name: jest
+      color: '#C21325'
+      url: ''
+    - name: selenium
+      color: '#43B02A'
+      url: ''
+    - name: jasmine
+      color: '#8A4182'
+      url: ''
+  APIs:
+    - name: graphql
+      color: '#E10098'
+      url: ''
+    - name: postman
+      color: '#FF6C37'
+      url: ''
+  FrontEnd:
+    - name: bootstrap
+      color: '#7952B3'
+      url: https://getbootstrap.com
+    - name: angularjs
+      color: '#E23237'
+      url: ''
+    - name: css3
+      color: '#1572B6'
+      url: https://www.w3schools.com/css/
+    - name: html5
+      color: '#E34F26'
+      url: https://www.w3.org/html/
+    - name: gatsby
+      color: '#663399'
+      url: ''
+    - name: react
+      color: '#61DAFB'
+      url: https://reactjs.org
+    - name: redux
+      color: '#764ABC'
+      url: https://redux.js.org
+    - name: jquery
+      color: '#0769AD'
+      url: https://jquery.com
+    - name: mui
+      color: '#007FFF'
+      url: https://mui.com/
+    - name: materialdesign
+      color: '#757575'
+      url: https://material.io/design
+    - name: chartdotjs
+      color: '#FF6384'
+      url: https://www.chartjs.org/
+    - name: d3dotjs
+      color: '#F9A03C'
+      url: https://d3js.org/
+    - name: pug
+      color: '#A86454'
+      url: https://pugjs.org
+    - name: sass
+      color: '#CC6699'
+      url: ''
+    - name: styledcomponents
+      color: '#DB7093'
+      url: ''
+  ML/DS:
+    - name: jupyter
+      color: '#F37626'
+      url: ''
+    - name: numpy
+      color: '#013243'
+      url: ''
+    - name: pytorch
+      color: '#EE4C2C'
+      url: ''
+    - name: tensorflow
+      color: '#FF6F00'
+      url: ''
+    - name: anaconda
+      color: '#44A833'
+      url: ''
+  Graphics:
+    - name: adobephotoshop
+      color: '#31A8FF'
+      url: ''
+    - name: adobeillustrator
+      color: '#FF9A00'
+      url: https://www.adobe.com/in/products/illustrator.html
+    - name: adobepremierepro
+      color: '#9999FF'
+      url: https://www.adobe.com/products/premiere.html
