@@ -278,22 +278,22 @@
       {
         "name": "numpy",
         "color": "#013243",
-        "url": ""
+        "url": "https://numpy.org/"
       },
       {
         "name": "pytorch",
         "color": "#EE4C2C",
-        "url": ""
+        "url": "https://pytorch.org/"
       },
       {
         "name": "tensorflow",
         "color": "#FF6F00",
-        "url": ""
+        "url": "https://www.tensorflow.org/"
       },
       {
         "name": "anaconda",
         "color": "#44A833",
-        "url": ""
+        "url": "https://www.anaconda.com/"
       }
     ],
     "Graphics": [
