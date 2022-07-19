@@ -162,7 +162,10 @@ Skillset:
   ML/DS:
     - name: jupyter
       color: '#F37626'
-      url: ''
+      url: 'https://jupyter.org/'
+    - name: googlecolab
+      color: '#F9AB00'
+      url: 'https://research.google.com/colaboratory/'
     - name: numpy
       color: '#013243'
       url: 'https://numpy.org/'
@@ -174,7 +177,7 @@ Skillset:
       url: 'https://www.tensorflow.org/'
     - name: anaconda
       color: '#44A833'
-      url: 'https://www.anaconda.com/"'
+      url: 'https://www.anaconda.com/'
   Graphics:
     - name: adobephotoshop
       color: '#31A8FF'
