@@ -52,19 +52,14 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-
         # grab previous artifact, save it in repo root
       - uses: actions/download-artifact@v3
         with:
           name: readme-artifact
           path: ./
 
-      - name: Update packages
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install -y git
+      - name: Checkout repo
+        uses: actions/checkout@v2
 
       - name: Configure git to trust the workspace despite the different owner
         run: |
@@ -72,16 +67,15 @@ jobs:
 
       - name: Copy the name & email from the last commit
         run: |
-          git config --local user.email "$(git log --format='%ae' HEAD^\!)"
-          git config --local user.name "$(git log --format='%an' HEAD^\!)"
+          user_email="$(git log --format='%ae' HEAD^\!)"
+          user_name="$(git log --format='%an' HEAD^\!)"
 
-      - name: Commit stage, commit and push files
-        run: |
-          remote_repo='https://${{ github.actor }}:${{ github.token }}@github.com/${{ github.repository }}.git'
-          git pull "${remote_repo}" "HEAD:${{ github.ref }}" --tags -f
-          git add readme.md
-          git commit -m "docs: update skills icons"
-          git push "${remote_repo}" "HEAD:${{ github.ref }}"
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          default_author: user_info
+          message: "docs: update skills icons"
+          add: "readme.md"
 
       - name: Display Results
         run: |
