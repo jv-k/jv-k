@@ -27,13 +27,13 @@ Skillset:
   DevOps:
     - name: gnubash
       color: '#4EAA25'
-      url: ''
+      url: 'https://www.gnu.org/software/bash/'
     - name: git
       color: '#F05032'
-      url: ''
+      url: 'https://git-scm.com/'
     - name: github
       color: '#181717'
-      url: ''
+      url: 'https://github.com'
     - name: docker
       color: '#2496ED'
       url: ''
