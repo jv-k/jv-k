@@ -77,8 +77,8 @@ jobs:
 
       - name: Commit stage, commit and push files
         run: |
-          cat ./readme.md
           remote_repo='https://${{ github.actor }}:${{ github.token }}@github.com/${{ github.repository }}.git'
+          git pull "${remote_repo}" "HEAD:${{ github.ref }}" --tags -f
           git add readme.md
           git commit -m "docs: update skills icons"
           git push "${remote_repo}" "HEAD:${{ github.ref }}"
