@@ -52,7 +52,20 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
- 
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Configure git to trust the workspace despite the different owner
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Copy the name & email from the last commit
+        run: |
+          git config --local user.email "$(git log --format='%ae' HEAD^\!)"
+          git config --local user.name "$(git log --format='%an' HEAD^\!)"
+
         # grab previous artifact, save it in repo root
       - uses: actions/download-artifact@v3
         with:
@@ -70,3 +83,4 @@ jobs:
       - name: Display Results
         run: |
           git show --summary
+
