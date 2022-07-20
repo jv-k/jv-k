@@ -1,8 +1,7 @@
 name: Generate Icons
 
 on:
-  release:
-    types: [published]
+  push:
 
   workflow_dispatch:
 
@@ -12,8 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
-
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          
       - name: Update packages
         run: |
           sudo apt-get update -y
