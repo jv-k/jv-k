@@ -52,30 +52,20 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+ 
         # grab previous artifact, save it in repo root
       - uses: actions/download-artifact@v3
         with:
           name: readme-artifact
           path: ./
 
-      - name: Checkout repo
-        uses: actions/checkout@v2
-
-      - name: Configure git to trust the workspace despite the different owner
-        run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-
-      - name: Copy the name & email from the last commit
-        run: |
-          user_email="$(git log --format='%ae' HEAD^\!)"
-          user_name="$(git log --format='%an' HEAD^\!)"
-
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
           default_author: user_info
           message: "docs: update skills icons"
-          add: "readme.md"
+          add: "./readme.md"
+          push: origin main
 
       - name: Display Results
         run: |
