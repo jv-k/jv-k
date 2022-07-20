@@ -79,12 +79,6 @@ Skillset:
     - name: webpack
       color: '#885630'
       url: https://webpack.js.org
-    - name: grunt
-      color: '#FAA918'
-      url: ''
-    - name: gulp
-      color: '#CF4647'
-      url: ''
     - name: backbonedotjs
       color: '#0071B5'
       url: https://backbonejs.org
