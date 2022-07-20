@@ -17,7 +17,7 @@ Skillset:
       url: https://www.w3schools.com/cpp/
     - name: coffeescript
       color: '#2F2625'
-      url: ''
+      url: 'https://coffeescript.org/'
     - name: php
       color: '#777BB4'
       url: https://www.php.net
@@ -36,13 +36,13 @@ Skillset:
       url: 'https://github.com'
     - name: docker
       color: '#2496ED'
-      url: ''
+      url: 'https://www.docker.com/'
     - name: kubernetes
       color: '#326CE5'
-      url: ''
+      url: 'https://kubernetes.io/'
     - name: vagrant
       color: '#1868F2'
-      url: ''
+      url: 'https://www.vagrantup.com/'
   DBs:
     - name: mongodb
       color: '#47A248'
