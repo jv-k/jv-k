@@ -1,6 +1,6 @@
 {
   "name": "jv-k",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "./src/index.js",
   "repository": "ssh://git@github.com/jv-k/jv-k",
   "author": "John Valai <git@jvk.to>",
