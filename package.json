@@ -8,7 +8,9 @@
   "type": "module",
   "scripts": {
     "build": "node ./src/main.js",
-    "test:yaml": "node ./tests/test.yaml.js"
+    "test:yaml": "node ./tests/test.yaml.js",
+    "docs:build": "jsdoc -c .jsdoc.json",
+    "docs:serve": "cd docs && python3 -m http.server"
   },
   "dependencies": {
     "eslint": "^8.0.1",
@@ -22,5 +24,9 @@
     "pug": "^3.0.2",
     "showdown": "^2.1.0",
     "yaml-lint": "^1.7.0"
+  },
+  "devDependencies": {
+    "better-docs": "^2.7.2",
+    "jsdoc": "^3.6.11"
   }
 }

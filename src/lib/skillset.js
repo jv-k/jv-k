@@ -49,7 +49,6 @@ class SkillSet {
    * @returns {Promise<Object>} - an object literal containing the icon data.
    * @method
    * @async
-   * @private
    * @memberof SkillSet
    */
   getData = async () => {
@@ -64,7 +63,6 @@ class SkillSet {
    *
    * @returns {String} - Skills icons HTML
    * @method
-   * @private
    * @memberof SkillSet
    */
   renderSkillsHtml = () => {
@@ -96,7 +94,6 @@ class SkillSet {
    * @returns {Promise<String>} - The contents of the Readme template file
    * @method
    * @async
-   * @private
    * @memberof SkillSet
    */
   getReadmeFile = async () => {
@@ -110,7 +107,6 @@ class SkillSet {
    *
    * @returns {String} - HTML of the Readme file.
    * @method
-   * @private
    * @memberof SkillSet
    * */
   prepareHtml = () => {
@@ -127,7 +123,6 @@ class SkillSet {
    * returns {Promise<void>}
    * @method
    * @async
-   * @private
    * @memberof SkillSet
    *
    */
