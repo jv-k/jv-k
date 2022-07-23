@@ -1,8 +1,26 @@
+/**
+ * @fileoverview Definition of the SkillSet class.
+ * @author John Valai <git@jvk.to>
+ */
+
 import fs from 'fs/promises'
 import yaml from 'js-yaml';
 import pug from 'pug';
 
-export default class SkillSet {
+/** @class SkillSet
+ *
+ * Generates a list of skillset icons and inserts it into a template.
+ * @requires module:fs/promises
+ * @requires module:js-yaml
+ * @requires module:pug
+*/
+class SkillSet {
+  /**
+   * Creates an instance of SkillSet.
+   * @param {Object} config - Settings used to configure how README.md is generated
+   * @constructor
+   * @memberof SkillSet
+   */
   constructor (config) {
     this.config = {
       datafile: '',
@@ -13,20 +31,27 @@ export default class SkillSet {
       file_output: ''
     };
 
+    // Append config to default static config
     this.config = {
       ...this.config,
       ...config
     };
 
     this.skillsHtml = '';
-    this.readmeMd = '';
-
-    return (async () => {
-      this.skills_data = await this.getData();
-      return this;
-    })();
+    this.readmeMD = '';
+    this.readmeHTML = '';
+    this.skills_data = {};
   }
 
+  /**
+   * Retrieves the skills icon data from a yaml data file.
+   *
+   * @returns {Promise<Object>} - an object literal containing the icon data.
+   * @method
+   * @async
+   * @private
+   * @memberof SkillSet
+   */
   getData = async () => {
     const data = fs.readFile(this.config.datafile, 'utf8');
     const result = await data;
@@ -34,6 +59,14 @@ export default class SkillSet {
     return await yaml.load(result).Skillset;
   }
 
+  /**
+   * Generates HTML for all skills icons using a template.
+   *
+   * @returns {String} - Skills icons HTML
+   * @method
+   * @private
+   * @memberof SkillSet
+   */
   renderSkillsHtml = () => {
     let html = '';
     const skillset = this.skills_data;
@@ -54,35 +87,78 @@ export default class SkillSet {
     });
     console.info('Rendered skillset html.');
 
-    this.skillsHtml = html;
-  }
-
-  getReadmeFile = async () => {
-    const data = await fs.readFile(this.config.file_input, 'utf8');
-    console.info('Loaded file: <' + this.config.file_input + '>');
-    this.readmeMd = data;
+    return html;
   }
 
   /**
-   * readmeMd
+   * Loads the markdown Readme file.
+   *
+   * @returns {Promise<String>} - The contents of the Readme template file
+   * @method
+   * @async
+   * @private
+   * @memberof SkillSet
    */
+  getReadmeFile = async () => {
+    const data = await fs.readFile(this.config.file_input, 'utf8');
+    console.info('Loaded file: <' + this.config.file_input + '>');
+    return data;
+  }
+
+  /**
+   * Replaces the placeholder tags in the Readme file with the skills icons HTML.
+   *
+   * @returns {String} - HTML of the Readme file.
+   * @method
+   * @private
+   * @memberof SkillSet
+   * */
   prepareHtml = () => {
     // eslint-disable-next-line no-eval
     const re = eval('/(' + this.config.tag_start + ')[\\s\\S]*?(' + this.config.tag_end + ')/g');
 
-    this.readmeMd = this.readmeMd
+    return this.readmeMD
       .replace(re, `$1\n${this.skillsHtml}\n$2`);
   }
 
+  /**
+   * Writes the readme generated back to a build file.
+   *
+   * returns {Promise<void>}
+   * @method
+   * @async
+   * @private
+   * @memberof SkillSet
+   *
+   */
   writeReadmeFile = async () => {
-    await fs.writeFile(this.config.file_output, this.readmeMd);
+    const readFile = await fs.writeFile(this.config.file_output, this.readmeHTML);
     console.info('Wrote output to file: <' + this.config.file_output + '>');
+    return readFile;
   }
 
-  render = async () => {
-    this.renderSkillsHtml();
-    await this.getReadmeFile();
-    this.prepareHtml();
-    await this.writeReadmeFile();
+  /**
+   * Public entry point to process and save a Skillset file with skills icons.
+   *
+   * @method
+   * @async
+   * @public
+   * @memberof SkillSet
+   */
+  renderReadme = async () => {
+    try {
+      this.skills_data = await this.getData();
+      this.skillsHtml = this.renderSkillsHtml();
+      this.readmeMD = await this.getReadmeFile();
+      this.readmeHTML = this.prepareHtml();
+      await this.writeReadmeFile();
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
+
+/**
+ * Expose SkillSet
+ */
+export default SkillSet;
