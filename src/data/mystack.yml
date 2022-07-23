@@ -8,7 +8,7 @@ Skillset:
       url: https://www.typescriptlang.org/
     - name: c
       color: '#A8B9CC'
-      url: ''
+      url: 'https://www.learn-c.org/'
     - name: csharp
       color: '#239120'
       url: https://www.w3schools.com/cs/
@@ -32,7 +32,7 @@ Skillset:
       color: '#F05032'
       url: 'https://git-scm.com/'
     - name: github
-      color: '#181717'
+      color: '#ffffff'
       url: 'https://github.com'
     - name: docker
       color: '#2496ED'
@@ -46,36 +46,36 @@ Skillset:
   DBs:
     - name: mongodb
       color: '#47A248'
-      url: ''
+      url: 'https://www.mongodb.com/'
     - name: mysql
       color: '#4479A1'
-      url: ''
+      url: 'https://www.mysql.com/'
   Cloud:
     - name: microsoftazure
       color: '#0078D4'
-      url: ''
+      url: 'https://azure.microsoft.com/'
     - name: amazonaws
       color: '#232F3E'
-      url: ''
+      url: 'https://aws.amazon.com/'
   BackEnd:
     - name: nodedotjs
       color: '#339933'
-      url: ''
+      url: 'https://nodejs.dev/'
     - name: django
       color: '#092E20'
-      url: ''
+      url: 'https://www.djangoproject.com/'
     - name: express
       color: '#000000'
-      url: ''
+      url: 'https://expressjs.com/'
     - name: flask
       color: '#000000'
-      url: ''
+      url: 'https://palletsprojects.com/p/flask/'
     - name: laravel
       color: '#FF2D20'
-      url: ''
+      url: 'https://laravel.com/'
     - name: composer
       color: '#885630'
-      url: ''
+      url: 'https://getcomposer.org/'
     - name: webpack
       color: '#885630'
       url: https://webpack.js.org
@@ -87,33 +87,33 @@ Skillset:
       url: https://gulpjs.com
     - name: grunt
       color: '#FAA918'
-      url: ''
+      url: 'https://gruntjs.com/'
     - name: bower
       color: '#EF5734'
       url: https://bower.io/
     - name: jest
       color: '#C21325'
-      url: ''
+      url: 'https://jestjs.io/'
     - name: selenium
       color: '#43B02A'
-      url: ''
+      url: 'https://www.selenium.dev/'
     - name: jasmine
       color: '#8A4182'
-      url: ''
+      url: 'https://jasmine.github.io/'
   APIs:
     - name: graphql
       color: '#E10098'
-      url: ''
+      url: 'https://graphql.org/'
     - name: postman
       color: '#FF6C37'
-      url: ''
+      url: 'https://www.postman.com/'
   FrontEnd:
     - name: bootstrap
       color: '#7952B3'
       url: https://getbootstrap.com
     - name: angularjs
       color: '#E23237'
-      url: ''
+      url: 'https://angularjs.org/'
     - name: css3
       color: '#1572B6'
       url: https://www.w3schools.com/css/
@@ -122,7 +122,7 @@ Skillset:
       url: https://www.w3.org/html/
     - name: gatsby
       color: '#663399'
-      url: ''
+      url: 'https://www.gatsbyjs.com/'
     - name: react
       color: '#61DAFB'
       url: https://reactjs.org
@@ -149,10 +149,10 @@ Skillset:
       url: https://pugjs.org
     - name: sass
       color: '#CC6699'
-      url: ''
+      url: 'https://sass-lang.com/'
     - name: styledcomponents
       color: '#DB7093'
-      url: ''
+      url: 'https://styled-components.com/'
   ML/DS:
     - name: jupyter
       color: '#F37626'

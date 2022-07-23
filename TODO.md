@@ -11,9 +11,8 @@ jv-k readme.md generator
 ### In Progress
 
 
-
 ### Done ✓
 
-- [x] Add JSDoc  
+- [x] Add JSDoc comments
 - [x] Add error handling  
 
