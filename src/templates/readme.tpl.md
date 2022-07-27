@@ -1,10 +1,11 @@
-## Hey, I'm John 👋🏻
+## Hola 👋🏻
 
 <img src="assets/img/banner.png" width="100%" alt="" />
 
-> ▲ My interests include: Everything JavaScript💛 ▲ React ▲ Python ▲ APIs ▲ AWS & Azure ▲ SDLC ▲ DevOps ▲ ML ▲ Applied datascience ▲ Bioinformatics ▲ Software design principles ▲ Design patterns ▲ Automation ▲ Agile methodologies
+> ▲ Aspirant opensourcer
 
-> ▲ Aiming to contribute to open source projects, as well as to release my own tools and utilities
+> ▲ Some of my interests: Everything JavaScript💛 ▲ React ▲ Python ▲ APIs ▲ AWS & Azure ▲ SDLC ▲ DevOps ▲ ML ▲ Applied datascience ▲ Bioinformatics ▲ Software design principles ▲ Design patterns ▲ Automation ▲ Agile methodologies
+
 
 ## My stack
 <!-- 
@@ -19,7 +20,7 @@
 <!-- START mystack -->
 <!-- END mystack -->
 
-<sub>🤫 Psst! This was generated [programmatically](https://github.com/jv-k/jv-k).</sub>
+<sub>🤫 Psst.. this was generated [programmatically](https://github.com/jv-k/jv-k)</sub>
 
 <!--
 Made with 🖤
