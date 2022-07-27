@@ -17,13 +17,13 @@
 -->
 
 <!-- Icons are generated from src/data/mystack.json -->
-<bockquote>
+<blockquote>
 <!-- START mystack -->
 <!-- END mystack -->
 </blockquote>
-
-<sub>🤫 Psst.. this was generated [programmatically](https://github.com/jv-k/jv-k)</sub>
-
+<p align="right">
+  <sub>🤫 Psst.. this was generated <a href="https://github.com/jv-k/jv-k">programmatically</a></sub>
+</p>
 <!--
 Made with 🖤
 -->
