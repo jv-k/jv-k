@@ -16,9 +16,11 @@
     https://simpleicons.vercel.app/git/F05032
 -->
 
-<!-- Icons generated automatically from src/data/mystack.json -->
+<!-- Icons are generated from src/data/mystack.json -->
+<bockquote>
 <!-- START mystack -->
 <!-- END mystack -->
+</blockquote>
 
 <sub>🤫 Psst.. this was generated [programmatically](https://github.com/jv-k/jv-k)</sub>
 
