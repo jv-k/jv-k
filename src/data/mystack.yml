@@ -153,6 +153,13 @@ Skillset:
     - name: styledcomponents
       color: '#DB7093'
       url: 'https://styled-components.com/'
+  Frameworks:
+    - name: electron
+      color: '#47848F'
+      url: https://www.electronjs.org/
+    - name: apachecordova
+      color: '#E8E8E8'
+      url: https://cordova.apache.org/
   ML/DS:
     - name: jupyter
       color: '#F37626'
