@@ -50,6 +50,10 @@ Skillset:
     - name: mysql
       color: '#4479A1'
       url: 'https://www.mysql.com/'
+    - name: postgresql
+      color: '#4169E1'
+      url: 'https://www.postgresql.org/'
+      
   Cloud:
     - name: microsoftazure
       color: '#0078D4'
