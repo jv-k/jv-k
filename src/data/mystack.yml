@@ -196,3 +196,7 @@ Skillset:
     - name: sketchup
       color: '#005F9E'
       url: https://www.sketchup.com/
+  Productivity:
+    - name: todoist
+      color: '#E44332'
+      url: 'https://todoist.com/'      
