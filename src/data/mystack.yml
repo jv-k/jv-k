@@ -80,6 +80,9 @@ Skillset:
     - name: composer
       color: '#885630'
       url: 'https://getcomposer.org/'
+    - name: codeigniter
+      color: '#EF4223'
+      url: 'https://codeigniter.com/'      
     - name: webpack
       color: '#885630'
       url: https://webpack.js.org
