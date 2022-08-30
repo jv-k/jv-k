@@ -196,6 +196,9 @@ Skillset:
     - name: adobepremierepro
       color: '#9999FF'
       url: https://www.adobe.com/products/premiere.html
+    - name: adobeindesign
+      color: '#FF3366'
+      url: https://www.adobe.com/products/indesign.html
     - name: sketchup
       color: '#005F9E'
       url: https://www.sketchup.com/
