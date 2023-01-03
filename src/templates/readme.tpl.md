@@ -24,7 +24,7 @@
 > — Fun stuff: <br/> ▲ Electronics/MCUs ▲ Robotics ▲ Aero R/C ▲ Guitars + Amps ▲ Audio electronics ▲ Underwater electronics
 
 <p align="right">
-  <sub>🤫 Psst.. this was generated <a href="https://github.com/jv-k/jv-k">by code</a></sub>
+  <sub><a href="https://github.com/jv-k/jv-k">🦾🤖</a></sub>
 </p>
 <!--
 Made with 🖤
