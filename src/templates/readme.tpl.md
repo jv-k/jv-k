@@ -1,13 +1,10 @@
-## Hola 👋🏻
-
 <img src="assets/img/banner.png" width="100%" alt="" />
 
-> ▲ Aspirant opensourcer
+## 👋🏻 Hi
 
-> ▲ Some of my interests: Everything JavaScript💛 ▲ React ▲ Python ▲ APIs ▲ AWS & Azure ▲ SDLC ▲ DevOps ▲ ML ▲ Applied datascience ▲ Bioinformatics ▲ Software design principles ▲ Design patterns ▲ Automation ▲ Agile methodologies
+> I'm a Fullstack Software Engineer
 
-
-## My stack
+<!-- ## My stack -->
 <!-- 
   Icons from: 
     https://github.com/simple-icons/simple-icons 
@@ -21,8 +18,13 @@
 <!-- START mystack -->
 <!-- END mystack -->
 </blockquote>
+
+> — Tech interests: <br/> ▲ SDLC ▲ CD/CI ▲ ML ▲ Software design principles ▲ Design patterns ▲ Automation ▲ Agile
+
+> — Fun stuff: <br/> ▲ Electronics/MCUs ▲ Robotics ▲ Aero R/C ▲ Guitars + Amps ▲ Audio electronics ▲ Underwater electronics
+
 <p align="right">
-  <sub>🤫 Psst.. this was generated <a href="https://github.com/jv-k/jv-k">programmatically</a></sub>
+  <sub>🤫 Psst.. this was generated <a href="https://github.com/jv-k/jv-k">by code</a></sub>
 </p>
 <!--
 Made with 🖤
