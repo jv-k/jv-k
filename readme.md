@@ -7,7 +7,7 @@
 > ▲ Some of my interests: Everything JavaScript💛 ▲ React ▲ Python ▲ APIs ▲ AWS & Azure ▲ SDLC ▲ DevOps ▲ ML ▲ Applied datascience ▲ Bioinformatics ▲ Software design principles ▲ Design patterns ▲ Automation ▲ Agile methodologies
 
 
-## My stack
+<!-- ## My stack -->
 <!-- 
   Icons from: 
     https://github.com/simple-icons/simple-icons 
