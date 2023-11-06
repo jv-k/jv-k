@@ -1,7 +1,13 @@
 default:
-  datafile: ./src/data/mystack.yml
-  tplfile: ./src/templates/icon.pug
-  tag_start: <!-- START mystack -->
-  tag_end: <!-- END mystack -->
-  file_input: ./src/templates/readme.tpl.md
-  file_output: ./build/readme.md
+  datafile:
+    ./src/data/mystack.yml
+  tplfile:
+    ./src/templates/icon.pug
+  tag_start:
+    <!-- START mystack -->
+  tag_end:
+    <!-- END mystack -->
+  file_input:
+    ./src/templates/readme.tpl.md
+  file_output:
+    ./build/readme.md
