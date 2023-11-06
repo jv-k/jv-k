@@ -1,8 +1,7 @@
 # 👋🏻 Hi
 
-> I'm a Fullstack Software Engineer
+> I'm a Fullstack Software Engineer.
 
-<!-- ## My stack -->
 <!-- 
   Icons from: 
     https://github.com/simple-icons/simple-icons 
@@ -13,10 +12,11 @@
 
 <!-- Icons are generated from src/data/mystack.json -->
 <blockquote>
+  — Tech that I enjoy using:
 <!-- START mystack -->
 <!-- END mystack -->
 </blockquote>
-
+e
 > — Tech interests: <br/> ▲ SDLC ▲ CD/CI ▲ ML ▲ Software design principles ▲ Design patterns ▲ Automation ▲ Agile
 
 > — Fun stuff: <br/> ▲ Electronics/MCUs ▲ Robotics ▲ Aero R/C ▲ Guitars + Amps ▲ Audio electronics ▲ Underwater electronics
