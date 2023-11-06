@@ -26,7 +26,7 @@
 </p>
 
 <p align="right">
-  <a href="https://github.com/jv-k/jv-k">🤖</a>
+  <sub><a href="https://github.com/jv-k/jv-k">🤖</a></sub>
 </p>
 <!--
 Made with 🖤
