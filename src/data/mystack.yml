@@ -43,6 +43,9 @@ Skillset:
     - name: vagrant
       color: '#1868F2'
       url: 'https://www.vagrantup.com/'
+    - name: warp
+      color: '#01A4FF'
+      url: https://www.warp.dev/
   DBs:
     - name: mongodb
       color: '#47A248'
