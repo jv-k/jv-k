@@ -22,7 +22,7 @@ e
 > — Fun stuff: <br/> ▲ Electronics/MCUs ▲ Robotics ▲ Aero R/C ▲ Guitars + Amps ▲ Audio electronics ▲ Underwater electronics
 
 <p align="center">
-  <a href="https://jvk.to"><img src="./assets/img/jvk-logo.svg" alt="jv-k logo" width="100"></a>
+  <a href="https://jvk.to"><img src="./assets/img/jvk-logo.svg" alt="jv-k logo" width="120"></a>
 </p>
 
 <p align="right">
