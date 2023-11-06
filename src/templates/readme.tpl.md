@@ -1,8 +1,4 @@
-<p align="center">
-  <a href="https://jvk.to"><img src="./assets/img/jvk-logo.svg" alt="jv-k logo" width="100"></a>
-</p>
-
-## 👋🏻 Hi
+# 👋🏻 Hi
 
 > I'm a Fullstack Software Engineer
 
@@ -24,6 +20,10 @@
 > — Tech interests: <br/> ▲ SDLC ▲ CD/CI ▲ ML ▲ Software design principles ▲ Design patterns ▲ Automation ▲ Agile
 
 > — Fun stuff: <br/> ▲ Electronics/MCUs ▲ Robotics ▲ Aero R/C ▲ Guitars + Amps ▲ Audio electronics ▲ Underwater electronics
+
+<p align="center">
+  <a href="https://jvk.to"><img src="./assets/img/jvk-logo.svg" alt="jv-k logo" width="100"></a>
+</p>
 
 <p align="right">
   <sub><a href="https://github.com/jv-k/jv-k">🤖</a></sub>
