@@ -56,7 +56,6 @@ Skillset:
     - name: postgresql
       color: '#4169E1'
       url: 'https://www.postgresql.org/'
-      
   Cloud:
     - name: microsoftazure
       color: '#0078D4'
@@ -88,7 +87,7 @@ Skillset:
       url: 'https://getcomposer.org/'
     - name: codeigniter
       color: '#EF4223'
-      url: 'https://codeigniter.com/'      
+      url: 'https://codeigniter.com/'
     - name: webpack
       color: '#885630'
       url: https://webpack.js.org
@@ -142,6 +141,9 @@ Skillset:
     - name: redux
       color: '#764ABC'
       url: https://redux.js.org
+    - name: nextdotjs
+      color: '#000000'
+      url:  https://nextjs.org/
     - name: jquery
       color: '#0769AD'
       url: https://jquery.com
@@ -211,4 +213,4 @@ Skillset:
   Productivity:
     - name: todoist
       color: '#E44332'
-      url: 'https://todoist.com/'      
+      url: 'https://todoist.com/'
