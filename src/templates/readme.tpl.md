@@ -24,7 +24,7 @@
 <p align="center">
   <a href="https://jvk.to"><img src="./assets/img/jvk-logo.svg" alt="jv-k logo" width="120"></a>
 </p>
-
+<hr style="height: 1px;"/>
 <p align="right">
   <sub><a href="https://github.com/jv-k/jv-k">🤖</a></sub>
 </p>
