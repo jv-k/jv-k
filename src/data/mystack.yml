@@ -80,6 +80,9 @@ Skillset:
     - name: laravel
       color: '#FF2D20'
       url: 'https://laravel.com/'
+    - name: symfony
+      color: '#000000'
+      url: https://symfony.com/
     - name: composer
       color: '#885630'
       url: 'https://getcomposer.org/'
