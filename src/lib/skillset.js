@@ -9,14 +9,16 @@ import pug from 'pug';
 
 /** @class SkillSet
  *
- * Generates a list of skillset icons and inserts it into a template.
+ * Defines a class called SkillSet that generates a list of skillset icons and insert them into a template to create a README.md file.
+ *
  * @requires module:fs/promises
  * @requires module:js-yaml
  * @requires module:pug
 */
 class SkillSet {
   /**
-   * Creates an instance of SkillSet.
+   * Defines a constructor that takes a config object as a parameter and sets the default and custom properties for the instance.
+   *
    * @param {Object} config - Settings used to configure how README.md is generated
    * @constructor
    * @memberof SkillSet
@@ -60,7 +62,7 @@ class SkillSet {
   }
 
   /**
-   * Generates HTML for all skills icons using a template.
+   * Generates HTML for all skills icons by looping through the skillset data and generates HTML for each skill icon using a pug template. It returns a string with the HTML code for all the skill icons.
    *
    * @returns {String} - Skills icons HTML
    * @method
@@ -91,7 +93,7 @@ class SkillSet {
   }
 
   /**
-   * Loads the markdown Readme file.
+   * Reads the markdown README file that contains the placeholder tags for the skill icons and returns the file content.
    *
    * @returns {Promise<String>} - The contents of the Readme template file
    * @method
@@ -106,7 +108,7 @@ class SkillSet {
   }
 
   /**
-   * Replaces the placeholder tags in the Readme file with the skills icons HTML.
+   * Replaces the placeholder tags in the README file with the HTML code for the skill icons and returns the updated HTML content.
    *
    * @returns {String} - HTML of the Readme file.
    * @method
@@ -138,7 +140,7 @@ class SkillSet {
   }
 
   /**
-   * Public entry point to process and save a Skillset file with skills icons.
+   * Public entry point that calls the needed methods in sequence and handles any errors that may occur.
    *
    * @method
    * @async
@@ -158,7 +160,4 @@ class SkillSet {
   }
 }
 
-/**
- * Expose SkillSet
- */
 export default SkillSet;
