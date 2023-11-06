@@ -1,4 +1,6 @@
-<img src="assets/img/banner.png" width="100%" alt="" />
+<p align="center">
+  <a href="https://jvk.to"><img src="./assets/img/jvk-logo.svg" alt="jv-k logo" width="100"></a>
+</p>
 
 ## 👋🏻 Hi
 
