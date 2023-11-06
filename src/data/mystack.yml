@@ -71,16 +71,16 @@ Skillset:
       color: '#092E20'
       url: 'https://www.djangoproject.com/'
     - name: express
-      color: '#000000'
+      color: '#333'
       url: 'https://expressjs.com/'
     - name: flask
-      color: '#000000'
+      color: '#333'
       url: 'https://palletsprojects.com/p/flask/'
     - name: laravel
       color: '#FF2D20'
       url: 'https://laravel.com/'
     - name: symfony
-      color: '#000000'
+      color: '#333'
       url: https://symfony.com/
     - name: composer
       color: '#885630'
@@ -142,7 +142,7 @@ Skillset:
       color: '#764ABC'
       url: https://redux.js.org
     - name: nextdotjs
-      color: '#000000'
+      color: '#333'
       url:  https://nextjs.org/
     - name: jquery
       color: '#0769AD'
