@@ -73,18 +73,25 @@ class SkillSet {
     let html = '';
     const skillset = this.skills_data;
     const topics = Object.keys(skillset);
-    const tpl = pug.compileFile(this.config.tplfile);
+    const tplSection = pug.compileFile(this.config.tpl_section);
+    const tplIcon = pug.compileFile(this.config.tpl_icon);
 
     topics.forEach((topic) => {
       const thisTopic = skillset[topic];
 
+      let iconsHtml = '';
+
       thisTopic.forEach((skill, index) => {
         const thisSkill = thisTopic[index];
-        html += tpl({
+        iconsHtml += tplIcon({
           name: thisSkill.name,
           url: thisSkill.url,
           color: thisSkill.color.replace('#', '')
         });
+      });
+      html += tplSection({
+        name: topic,
+        icons: iconsHtml
       });
     });
     console.info('Rendered skillset html.');

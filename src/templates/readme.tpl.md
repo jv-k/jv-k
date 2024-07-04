@@ -3,7 +3,8 @@
 </p>
 
 # 👋🏻 Hi
-> I'm a Fullstack Software Engineer.
+
+> I'm a Fullstack Software Engineer
 
 <!--
   Icons from:
@@ -13,20 +14,21 @@
     https://simpleicons.vercel.app/git/F05032
 -->
 
-<!-- Icons are generated from src/data/mystack.json -->
-<blockquote>
-  — Tech that I enjoy using: <br/><br/>
+<!-- Icons are generated from src/data/mystack.yml -->
+Tech that I enjoy using:
 <!-- START mystack -->
 <!-- END mystack -->
-</blockquote>
 
-> — Tech interests: <br/> ▲ SDLC ▲ CD/CI ▲ ML ▲ Software design principles ▲ Design patterns ▲ Automation ▲ Agile
+## Interests
 
-> — Fun stuff: <br/> ▲ Electronics/MCUs ▲ Robotics ▲ Aero R/C ▲ Guitars + Amps ▲ Audio electronics ▲ Underwater electronics
+▲ ML ▲ SDLC ▲ CD/CI Automation ▲ Design Principles ▲ Design Patterns
+
+## Fun stuff
+
+▲ Electronics/MCUs/FPGAs ▲ Robotics ▲ Aero R/C ▲ Guitars + Amps ▲ Audio electronics ▲ Underwater electronics
 
 <p align="right">
-  <sub><a href="https://github.com/jv-k/jv-k">🤖</a></sub>
+  <sub><a href="https://github.com/jv-k/jv-k" alt="generated dynamically">🤖</a></sub>
 </p>
-<!--
-Made with 🖤
--->
+
+<!-- Made with 🖤 -->

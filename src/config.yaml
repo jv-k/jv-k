@@ -1,7 +1,9 @@
 default:
   datafile:
     ./src/data/mystack.yml
-  tplfile:
+  tpl_section:
+    ./src/templates/section.pug
+  tpl_icon:
     ./src/templates/icon.pug
   tag_start:
     <!-- START mystack -->
