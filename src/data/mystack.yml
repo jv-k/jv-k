@@ -129,9 +129,6 @@ Skillset:
     - name: bootstrap
       color: '#7952B3'
       url: https://getbootstrap.com
-    - name: angularjs
-      color: '#E23237'
-      url: 'https://angularjs.org/'
     - name: css3
       color: '#1572B6'
       url: https://www.w3schools.com/css/
