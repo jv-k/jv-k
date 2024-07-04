@@ -1,14 +1,17 @@
 {
   "name": "jv-k",
   "version": "2.0.1",
-  "main": "./src/index.js",
+  "main": "./src/main.js",
   "repository": "ssh://git@github.com/jv-k/jv-k",
   "author": "John Valai <git@jvk.to>",
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "node ./src/main.js",
+    "build": "bun ./src/main.js",
+    "watch": "nodemon --exec pnpm run build",
     "test:yaml": "bun ./tests/test.yaml.js",
+    "ver-bump": "ver-bump -b",
+    "release": "gh release create --notes \"$(npx jv-k/releasetool)\""
   },
   "dependencies": {
     "js-yaml-promise": "^1.0.0",
@@ -25,5 +28,6 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "bun": "^1.1.18",
+    "nodemon": "^3.1.4"
   }
 }
