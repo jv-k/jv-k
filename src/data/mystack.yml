@@ -15,6 +15,9 @@ Skillset:
     - name: cplusplus
       color: '#00599C'
       url: https://www.w3schools.com/cpp/
+    - name: rust
+      color: '#000000'
+      url: 'https://www.rust-lang.org/'
     - name: php
       color: '#777BB4'
       url: https://www.php.net
