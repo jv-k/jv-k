@@ -18,7 +18,10 @@ jobs:
       - name: Update packages
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y git
+          sudo apt-get install -y git python
+
+      - name: Install Linter
+        run: pip install -r requirements.txt
 
       - name: Install NPM packages
         run: npm install
