@@ -8,19 +8,22 @@
   "type": "module",
   "scripts": {
     "build": "node ./src/main.js",
-    "test:yaml": "node ./tests/test.yaml.js"
+    "test:yaml": "bun ./tests/test.yaml.js",
   },
   "dependencies": {
+    "js-yaml-promise": "^1.0.0",
+    "node-yaml-config": "^1.0.0",
+    "pug": "^3.0.2",
+    "showdown": "^2.1.0",
+    "yaml-lint": "^1.7.0"
+  },
+  "devDependencies": {
     "eslint": "^8.0.1",
     "eslint-config-google": "^0.14.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
-    "js-yaml-promise": "^1.0.0",
-    "node-yaml-config": "^1.0.0",
-    "pug": "^3.0.2",
-    "showdown": "^2.1.0",
-    "yaml-lint": "^1.7.0"
+    "bun": "^1.1.18",
   }
 }

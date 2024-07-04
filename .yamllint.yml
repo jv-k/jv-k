@@ -1,0 +1,7 @@
+extends: default
+
+rules:
+  # quoted-strings:
+  #   quote-type: single
+  empty-values:
+    forbid-in-block-mappings: true
