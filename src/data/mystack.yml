@@ -147,6 +147,9 @@ Skillset:
     - name: nextdotjs
       color: '#333'
       url:  https://nextjs.org/
+    - name: vite
+      color: '#646CFF'
+      url: 'https://vitejs.dev/'
     - name: jquery
       color: '#0769AD'
       url: https://jquery.com
