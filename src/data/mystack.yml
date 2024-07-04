@@ -141,6 +141,9 @@ Skillset:
     - name: react
       color: '#61DAFB'
       url: https://reactjs.org
+    - name: preact
+      color: '#673AB8'
+      url: 'https://preactjs.com/'
     - name: redux
       color: '#764ABC'
       url: https://redux.js.org
