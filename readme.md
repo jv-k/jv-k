@@ -4,8 +4,6 @@
 
 # 👋🏻 Hi
 
-> I'm a Fullstack Software Engineer
-
 <!--
   Icons from:
     https://github.com/simple-icons/simple-icons
