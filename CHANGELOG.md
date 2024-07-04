@@ -1,0 +1,86 @@
+## 2.0.2 (July 04, 2024)
+- chore: updated package.json, updated package-lock.json, created CHANGELOG.md, bumped 2.0.1 -> 2.0.2
+- docs: remove jobtitle
+- bug(ci): fixed python version
+- Merge branch 'main' of ssh://github.com/jv-k/jv-k
+- chore(build): updated workflow -> yamllinter
+- chore: moved from node -> bun
+- tests: moved to yamllint for testing
+- docs: build readme.md
+- Merge branch 'main' of ssh://github.com/jv-k/jv-k
+- feat: added headings for skillsets
+- docs: build readme.md
+- docs: added new skills and re-arranged many
+- docs: added arc
+- docs: changed cordova
+- docs: added preact
+- docs: added vite
+- docs: removed angular
+- docs: added deno
+- docs: added bun
+- docs: added rustlang
+- docs: removed coffeescript
+- docs: build readme.md
+- style: made logo bigger
+- style: made logo bigger
+- style: made logo bigger
+- style: made logo bigger
+- style: made logo bigger
+- style: changed banner -> logo
+- docs: build readme.md
+- style: changed banner -> logo
+- docs: build readme.md
+- style: change colour
+- docs: build readme.md
+- docs: added nextjs
+- docs: added symfony
+- docs: add warp icon
+- refactor: improve readability
+- chore: improve comments
+- docs: build readme.md
+- docs: amend previous
+- docs: build readme.md
+- docs: 🤖
+- docs: build readme.md
+- docs: update template
+- docs: build readme.md
+- docs: remove header
+- docs: build readme.md
+- docs: added adobe indesignw
+- docs: build readme.md
+- docs: add codeigniter
+- docs: build readme.md
+- docs: added todoist
+- docs: build readme.md
+- docs: add postgresql
+- docs: build readme.md
+- docs: add sketchup
+- docs: build readme.md
+- docs: added cordova & electronjs to my skillset
+- docs: build readme.md
+- docs: build readme.md
+- docs;
+- docs: build readme.md
+- docs: updated template
+- docs: build readme.md
+- docs: added remaining icon urls
+- chore: add more code comments
+- 2.0.1
+- 2.0.1
+- 2.0.0
+- 2.0.0
+- docs: build readme.md
+- docs: build readme.md
+- docs: update format
+- docs: update format
+- chore: fix commit issue #2
+- chore: fix commit issue #2
+- docs: remove duplicates
+- docs: remove duplicates
+- chore: fixed commit issue
+- chore: fixed commit issue
+- docs: added urls
+- docs: added urls
+- docs: update skills icons
+- docs: update skills icons
+
