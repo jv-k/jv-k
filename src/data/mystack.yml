@@ -182,7 +182,7 @@ Skillset:
       color: '#47848F'
       url: https://www.electronjs.org/
     - name: apachecordova
-      color: '#E8E8E8'
+      color: '#333'
       url: https://cordova.apache.org/
   ML/DS:
     - name: jupyter
