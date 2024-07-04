@@ -67,6 +67,9 @@ Skillset:
     - name: nodedotjs
       color: '#339933'
       url: 'https://nodejs.dev/'
+    - name: bun
+      color: '#000000'
+      url: 'https://bun.sh/'
     - name: django
       color: '#092E20'
       url: 'https://www.djangoproject.com/'
