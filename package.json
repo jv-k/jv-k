@@ -1,6 +1,6 @@
 {
   "name": "jv-k",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "./src/main.js",
   "repository": "ssh://git@github.com/jv-k/jv-k",
   "author": "John Valai <git@jvk.to>",
@@ -10,8 +10,7 @@
     "build": "bun ./src/main.js",
     "watch": "nodemon --exec pnpm run build",
     "test:yaml": "bun ./tests/test.yaml.js",
-    "ver-bump": "ver-bump -b",
-    "release": "gh release create --notes \"$(npx jv-k/releasetool)\""
+    "bump": "ver-bump -b"
   },
   "dependencies": {
     "js-yaml-promise": "^1.0.0",
