@@ -6,9 +6,15 @@ Skillset:
     - name: typescript
       color: '#3178C6'
       url: https://www.typescriptlang.org/
+    - name: php
+      color: '#777BB4'
+      url: https://www.php.net
+    - name: python
+      color: '#3776AB'
+      url: https://www.python.org
     - name: c
       color: '#A8B9CC'
-      url: 'https://www.learn-c.org/'
+      url: https://www.learn-c.org/
     - name: csharp
       color: '#239120'
       url: https://www.w3schools.com/cs/
@@ -17,83 +23,38 @@ Skillset:
       url: https://www.w3schools.com/cpp/
     - name: rust
       color: '#000000'
-      url: 'https://www.rust-lang.org/'
-    - name: php
-      color: '#777BB4'
-      url: https://www.php.net
-    - name: python
-      color: '#3776AB'
-      url: https://www.python.org
-  DevOps:
-    - name: gnubash
-      color: '#4EAA25'
-      url: 'https://www.gnu.org/software/bash/'
-    - name: git
-      color: '#F05032'
-      url: 'https://git-scm.com/'
-    - name: github
-      color: '#ffffff'
-      url: 'https://github.com'
-    - name: docker
-      color: '#2496ED'
-      url: 'https://www.docker.com/'
-    - name: kubernetes
-      color: '#326CE5'
-      url: 'https://kubernetes.io/'
-    - name: vagrant
-      color: '#1868F2'
-      url: 'https://www.vagrantup.com/'
-    - name: warp
-      color: '#01A4FF'
-      url: https://www.warp.dev/
-  DBs:
-    - name: mongodb
-      color: '#47A248'
-      url: 'https://www.mongodb.com/'
-    - name: mysql
-      color: '#4479A1'
-      url: 'https://www.mysql.com/'
-    - name: postgresql
-      color: '#4169E1'
-      url: 'https://www.postgresql.org/'
-  Cloud:
-    - name: microsoftazure
-      color: '#0078D4'
-      url: 'https://azure.microsoft.com/'
-    - name: amazonaws
-      color: '#232F3E'
-      url: 'https://aws.amazon.com/'
-  BackEnd:
+      url: https://www.rust-lang.org/
+  Backend:
     - name: nodedotjs
       color: '#339933'
-      url: 'https://nodejs.dev/'
+      url: https://nodejs.dev/
     - name: bun
       color: '#000000'
-      url: 'https://bun.sh/'
+      url: https://bun.sh/
     - name: deno
       color: '#000000'
-      url: 'https://deno.com/'
+      url: https://deno.com/
     - name: django
       color: '#092E20'
-      url: 'https://www.djangoproject.com/'
+      url: https://www.djangoproject.com/
     - name: express
       color: '#333'
-      url: 'https://expressjs.com/'
+      url: https://expressjs.com/
     - name: flask
       color: '#333'
-      url: 'https://palletsprojects.com/p/flask/'
+      url: https://palletsprojects.com/p/flask/
     - name: laravel
       color: '#FF2D20'
-      url: 'https://laravel.com/'
+      url: https://laravel.com/
     - name: symfony
       color: '#333'
       url: https://symfony.com/
     - name: composer
       color: '#885630'
-      url: 'https://getcomposer.org/'
+      url: https://getcomposer.org/
     - name: codeigniter
       color: '#EF4223'
-      url: 'https://codeigniter.com/'
+      url: https://codeigniter.com/
     - name: webpack
       color: '#885630'
       url: https://webpack.js.org
@@ -105,57 +66,44 @@ Skillset:
       url: https://gulpjs.com
     - name: grunt
       color: '#FAA918'
-      url: 'https://gruntjs.com/'
+      url: https://gruntjs.com/
     - name: bower
       color: '#EF5734'
       url: https://bower.io/
     - name: jest
       color: '#C21325'
-      url: 'https://jestjs.io/'
+      url: https://jestjs.io/
     - name: selenium
       color: '#43B02A'
-      url: 'https://www.selenium.dev/'
+      url: https://www.selenium.dev/
     - name: jasmine
       color: '#8A4182'
-      url: 'https://jasmine.github.io/'
-  APIs:
-    - name: graphql
-      color: '#E10098'
-      url: 'https://graphql.org/'
-    - name: postman
-      color: '#FF6C37'
-      url: 'https://www.postman.com/'
-  FrontEnd:
-    - name: bootstrap
-      color: '#7952B3'
-      url: https://getbootstrap.com
-    - name: css3
-      color: '#1572B6'
-      url: https://www.w3schools.com/css/
-    - name: html5
-      color: '#E34F26'
-      url: https://www.w3.org/html/
-    - name: gatsby
-      color: '#663399'
-      url: 'https://www.gatsbyjs.com/'
+      url: https://jasmine.github.io/
+  Frontend:
     - name: react
       color: '#61DAFB'
       url: https://reactjs.org
     - name: preact
       color: '#673AB8'
-      url: 'https://preactjs.com/'
-    - name: redux
-      color: '#764ABC'
-      url: https://redux.js.org
+      url: https://preactjs.com/
     - name: nextdotjs
       color: '#333'
-      url:  https://nextjs.org/
-    - name: vite
-      color: '#646CFF'
-      url: 'https://vitejs.dev/'
+      url: https://nextjs.org/
     - name: jquery
       color: '#0769AD'
       url: https://jquery.com
+    - name: bootstrap
+      color: '#7952B3'
+      url: https://getbootstrap.com
+    - name: tailwindcss
+      color: '#06B6D4'
+      url: https://tailwindcss.com/
+    - name: shadcnui
+      color: '#000000'
+      url: https://ui.shadcn.com/
+    - name: gatsby
+      color: '#663399'
+      url: https://www.gatsbyjs.com/
     - name: mui
       color: '#007FFF'
       url: https://mui.com/
@@ -173,40 +121,109 @@ Skillset:
       url: https://pugjs.org
     - name: sass
       color: '#CC6699'
-      url: 'https://sass-lang.com/'
+      url: https://sass-lang.com/
     - name: styledcomponents
       color: '#DB7093'
-      url: 'https://styled-components.com/'
-  Frameworks:
+      url: https://styled-components.com/
+  'Cross Platform':
     - name: electron
       color: '#47848F'
       url: https://www.electronjs.org/
     - name: apachecordova
       color: '#333'
       url: https://cordova.apache.org/
+    - name: capacitor
+      color: '#119EFF'
+      url: https://capacitorjs.com/
+  'JS/TS Tooling':
+    - name: zod
+      color: '#3E67B1'
+      url: https://zod.dev/
+    - name: vite
+      color: '#646CFF'
+      url: https://vitejs.dev/
+    - name: xstate
+      color: '#2C3E50'
+      url: https://xstate.js.org/
+    - name: redux
+      color: '#764ABC'
+      url: https://redux.js.org
+  API:
+    - name: graphql
+      color: '#E10098'
+      url: https://graphql.org/
+    - name: postman
+      color: '#FF6C37'
+      url: https://www.postman.com/
+    - name: trpc
+      color: '#2596BE'
+      url: https://trpc.io/
+  DevOps:
+    - name: gnubash
+      color: '#4EAA25'
+      url: https://www.gnu.org/software/bash/
+    - name: docker
+      color: '#2496ED'
+      url: https://www.docker.com/
+    - name: kubernetes
+      color: '#326CE5'
+      url: https://kubernetes.io/
+    - name: vagrant
+      color: '#1868F2'
+      url: https://www.vagrantup.com/
+  DBs:
+    - name: mongodb
+      color: '#47A248'
+      url: https://www.mongodb.com/
+    - name: mysql
+      color: '#4479A1'
+      url: https://www.mysql.com/
+    - name: postgresql
+      color: '#4169E1'
+      url: https://www.postgresql.org/
+  Cloud:
+    - name: microsoftazure
+      color: '#0078D4'
+      url: https://azure.microsoft.com/
+    - name: azurefunctions
+      color: '#feb124'
+      url: https://github.com/Azure/Azure-Functions
+    - name: amazonaws
+      color: '#232F3E'
+      url: https://aws.amazon.com/
+    - name: netlify
+      color: '#00C7B7'
+      url: https://www.netlify.com/
+  CLI:
+    - name: zsh
+      color: '#F15A24'
+      url: https://ohmyz.sh/
+    - name: tmux
+      color: '#1BB91F'
+      url: https://github.com/tmux/tmux
   ML/DS:
     - name: jupyter
       color: '#F37626'
-      url: 'https://jupyter.org/'
+      url: https://jupyter.org/
     - name: googlecolab
       color: '#F9AB00'
-      url: 'https://research.google.com/colaboratory/'
+      url: https://research.google.com/colaboratory/
     - name: numpy
       color: '#013243'
-      url: 'https://numpy.org/'
+      url: https://numpy.org/
     - name: pytorch
       color: '#EE4C2C'
-      url: 'https://pytorch.org/'
+      url: https://pytorch.org/
     - name: tensorflow
       color: '#FF6F00'
-      url: 'https://www.tensorflow.org/'
+      url: https://www.tensorflow.org/
     - name: anaconda
       color: '#44A833'
-      url: 'https://www.anaconda.com/'
+      url: https://www.anaconda.com/
   Graphics:
     - name: adobephotoshop
       color: '#31A8FF'
-      url: 'https://www.adobe.com/in/products/photoshop.html'
+      url: https://www.adobe.com/in/products/photoshop.html
     - name: adobeillustrator
       color: '#FF9A00'
       url: https://www.adobe.com/in/products/illustrator.html
@@ -219,8 +236,40 @@ Skillset:
     - name: sketchup
       color: '#005F9E'
       url: https://www.sketchup.com/
+  Editors:
+    - name: visualstudiocode
+      color: '#117dcd'
+      url: https://code.visualstudio.com/
+    - name: visualstudio
+      color: '#cb96f8'
+      url: https://visualstudio.microsoft.com/
+    - name: microeditor
+      color: '#2E3192'
+      url: https://micro-editor.github.io/
+    - name: sublimetext
+      color: '#FF9800'
+      url: https://www.sublimetext.com/
+  OS:
+    - name: macos
+      color: '#000000'
+      url: https://github.com/apple-oss-distributions/xnu
+    - name: linux
+      color: '#FCC624'
+      url: https://ubuntu.com/
+    - name: windows
+      color: '#00a1f1'
+      url: ''
+  Hardware:
+    - name: arduino
+      color: '#00878F'
+      url: https://www.arduino.cc/
+    - name: raspberrypi
+      color: '#A22846'
+      url: https://www.raspberrypi.org/
   Productivity:
     - name: todoist
       color: '#E44332'
-      url: 'https://todoist.com/'
-    - name: arc      color: '#FCBFBD'      url: https://arc.net/
+      url: https://todoist.com/
+    - name: arc
+      color: '#FCBFBD'
+      url: https://arc.net/
