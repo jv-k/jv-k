@@ -1,6 +1,6 @@
 {
   "name": "jv-k",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "GitHub profile README generator with dynamic skillset icons",
   "main": "./src/main.ts",
   "bin": {

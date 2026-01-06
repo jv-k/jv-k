@@ -1,3 +1,36 @@
+## 3.0.0 (January 06, 2026)
+- chore: updated package.json, updated CHANGELOG.md, bumped 2.0.2 -> 3.0.0
+- docs: update ARCHITECTURE.md to reflect TypeScript migration
+- chore(data): update skillset with new technologies
+- fix(test): use bracket notation for index signature access
+- docs(lib): add README documenting library modules
+- chore(tpl): add space between icons
+- chore: add enhanced npm scripts for development workflow
+- refactor(fetch-icons): use IconFetcherService and ProgressReporter
+- test: add unit tests for ProgressReporter
+- test: add comprehensive tests for IconFetcherService
+- feat(lib): add ProgressReporter for clean progress tracking
+- feat(lib): extract IconFetcherService and add tests
+- chore: update CI workflow and regenerate README
+- feat(icons): add build-time icon fetcher with version fallback
+- refactor(logging): add shared pino logger factory
+- Merge branch 'refactor-improvements'
+- chore: add Prettier and configure VS Code formatting
+- refactor!: migrate codebase from JavaScript to TypeScript
+- feat: add CLI interface with commander
+- test: add comprehensive unit tests with Bun test framework
+- refactor: modernise codebase with private fields, JSDoc types and pino logger
+- fix: remove eval(), add input validation and improve error handling
+- docs: build readme.md
+- merge: branch 'fix-missing-icons'
+- chore(ci/cd): update upload-artifact dep
+- bug: temp fix for missing icons
+- Add LICENSE
+- Merge branch 'main' of ssh://github.com/jv-k/jv-k
+- chore: updated package.json, updated package-lock.json, created CHANGELOG.md, bumped 2.0.1 -> 2.0.2
+- chore: updated package.json, updated package-lock.json, created CHANGELOG.md, bumped 2.0.1 -> 2.0.2
+- docs: build readme.md
+
 ## 2.0.2 (July 04, 2024)
 - chore: updated package.json, updated package-lock.json, created CHANGELOG.md, bumped 2.0.1 -> 2.0.2
 - docs: remove jobtitle
