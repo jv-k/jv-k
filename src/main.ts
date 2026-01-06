@@ -5,7 +5,8 @@
 
 import { load as configLoad } from 'node-yaml-config';
 import SkillSet from './lib/skillset.js';
+import type { SkillSetConfig } from './types/index.js';
 
-const config = configLoad('./src/config.yaml');
+const config = configLoad<SkillSetConfig>('./src/config.yaml');
 const mySkills = new SkillSet(config);
 await mySkills.renderReadme();
