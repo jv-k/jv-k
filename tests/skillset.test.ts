@@ -7,19 +7,20 @@ import { describe, test, expect, beforeAll, afterAll } from 'bun:test';
 import fs from 'fs/promises';
 import path from 'path';
 import SkillSet from '../src/lib/skillset.js';
+import type { SkillSetConfig } from '../src/types/index.js';
 
 // Test fixtures directory
 const FIXTURES_DIR = path.join(import.meta.dir, 'fixtures');
 
 // Valid test config
-const createValidConfig = () => ({
+const createValidConfig = (): SkillSetConfig => ({
   datafile: path.join(FIXTURES_DIR, 'test-skills.yml'),
   tpl_section: path.join(FIXTURES_DIR, 'section.pug'),
   tpl_icon: path.join(FIXTURES_DIR, 'icon.pug'),
   tag_start: '<!-- START mystack -->',
   tag_end: '<!-- END mystack -->',
   file_input: path.join(FIXTURES_DIR, 'readme.tpl.md'),
-  file_output: path.join(FIXTURES_DIR, 'output', 'readme.md')
+  file_output: path.join(FIXTURES_DIR, 'output', 'readme.md'),
 });
 
 // Setup and teardown
@@ -82,9 +83,8 @@ describe('SkillSet', () => {
 
     test('should throw error when required fields are missing', () => {
       const incompleteConfig = {
-        datafile: './test.yml'
-        // Missing other required fields
-      };
+        datafile: './test.yml',
+      } as SkillSetConfig;
 
       expect(() => new SkillSet(incompleteConfig, { silent: true })).toThrow(
         'Missing required config fields'
@@ -94,8 +94,8 @@ describe('SkillSet', () => {
     test('should throw error with specific missing field names', () => {
       const incompleteConfig = {
         datafile: './test.yml',
-        file_input: './input.md'
-      };
+        file_input: './input.md',
+      } as SkillSetConfig;
 
       expect(() => new SkillSet(incompleteConfig, { silent: true })).toThrow(
         /file_output.*tag_start.*tag_end.*tpl_section.*tpl_icon/
@@ -110,9 +110,9 @@ describe('SkillSet', () => {
       const data = await skillset.getData();
 
       expect(data).toBeDefined();
-      expect(data.Languages).toBeArray();
-      expect(data.Languages).toHaveLength(2);
-      expect(data.Languages[0].name).toBe('javascript');
+      expect(data['Languages']).toBeArray();
+      expect(data['Languages']).toHaveLength(2);
+      expect(data['Languages']?.[0]?.name).toBe('javascript');
     });
 
     test('should throw error for non-existent file', async () => {
@@ -130,11 +130,13 @@ describe('SkillSet', () => {
       const skillset = new SkillSet(config, { silent: true });
 
       // Load data first (simulating the renderReadme flow)
-      const data = await skillset.getData();
+      await skillset.getData();
 
       // Access private field via reflection for testing
       // We need to call getData first to populate skills_data
-      await skillset.renderReadme().catch(() => {}); // Ignore errors, we just want to trigger the flow
+      await skillset.renderReadme().catch(() => {
+        // Ignore errors, we just want to trigger the flow
+      });
 
       // For proper testing, we'll verify the full flow works
     });
@@ -149,7 +151,10 @@ describe('SkillSet', () => {
       await skillset.renderReadme();
 
       // Verify output file was created
-      const outputExists = await fs.access(config.file_output).then(() => true).catch(() => false);
+      const outputExists = await fs
+        .access(config.file_output)
+        .then(() => true)
+        .catch(() => false);
       expect(outputExists).toBe(true);
 
       // Verify content
@@ -205,11 +210,13 @@ describe('SkillSet', () => {
       const skillset = new SkillSet(config, { silent: true });
 
       // Test via prepareHtml with special characters in tags
-      config.tag_start = '<!-- START [test] -->';
-      config.tag_end = '<!-- END (test) -->';
+      const config2 = createValidConfig();
+      config2.tag_start = '<!-- START [test] -->';
+      config2.tag_end = '<!-- END (test) -->';
 
-      const skillset2 = new SkillSet(config, { silent: true });
+      const skillset2 = new SkillSet(config2, { silent: true });
       // If no error is thrown, escaping worked correctly
+      expect(skillset).toBeInstanceOf(SkillSet);
       expect(skillset2).toBeInstanceOf(SkillSet);
     });
   });

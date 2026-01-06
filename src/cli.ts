@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env bun
 /**
  * @fileoverview CLI interface for README generator
  * @author John Valai <git@jvk.to>
@@ -11,8 +11,17 @@ import { readFileSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
+import type { SkillSetConfig, CliOptions } from './types/index.js';
+
+interface PackageJson {
+  version: string;
+  name: string;
+}
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const pkg = JSON.parse(readFileSync(join(__dirname, '..', 'package.json'), 'utf8'));
+const pkg: PackageJson = JSON.parse(
+  readFileSync(join(__dirname, '..', 'package.json'), 'utf8')
+) as PackageJson;
 
 const program = new Command();
 
@@ -25,10 +34,10 @@ program
   .option('-o, --output <path>', 'Override output file path')
   .option('-s, --silent', 'Suppress log output', false)
   .option('-v, --verbose', 'Enable verbose logging', false)
-  .action(async (options) => {
+  .action(async (options: CliOptions) => {
     try {
       // Load config
-      const config = configLoad(options.config, options.env);
+      const config = configLoad<SkillSetConfig>(options.config, options.env);
 
       // Override output path if specified
       if (options.output) {
@@ -37,7 +46,7 @@ program
 
       // Create SkillSet instance and render
       const mySkills = new SkillSet(config, {
-        silent: options.silent
+        silent: options.silent,
       });
 
       await mySkills.renderReadme();
@@ -49,7 +58,8 @@ program
       process.exit(0);
     } catch (error) {
       if (!options.silent) {
-        console.error('✗ Error:', error.message);
+        const message = error instanceof Error ? error.message : String(error);
+        console.error('✗ Error:', message);
       }
       process.exit(1);
     }
