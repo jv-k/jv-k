@@ -22,27 +22,35 @@ class SkillSet {
    * @param {Object} config - Settings used to configure how README.md is generated
    * @constructor
    * @memberof SkillSet
+   * @throws {Error} If required config fields are missing
    */
   constructor (config) {
-    this.config = {
-      datafile: '',
-      tplfile: '',
-      tag_start: '',
-      tag_end: '',
-      file_input: '',
-      file_output: ''
-    };
+    // Validate required config fields
+    const requiredFields = ['datafile', 'file_input', 'file_output', 'tag_start', 'tag_end', 'tpl_section', 'tpl_icon'];
+    const missing = requiredFields.filter(field => !config[field]);
+    
+    if (missing.length > 0) {
+      throw new Error(`Missing required config fields: ${missing.join(', ')}`);
+    }
 
-    // Append config to default static config
-    this.config = {
-      ...this.config,
-      ...config
-    };
-
+    this.config = { ...config };
     this.skillsHtml = '';
     this.readmeMD = '';
     this.readmeHTML = '';
     this.skills_data = {};
+  }
+
+  /**
+   * Escapes special regex characters in a string.
+   *
+   * @param {String} string - The string to escape
+   * @returns {String} - The escaped string safe for use in RegExp
+   * @method
+   * @private
+   * @memberof SkillSet
+   */
+  escapeRegex = (string) => {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
   /**
@@ -123,8 +131,10 @@ class SkillSet {
    * @memberof SkillSet
    * */
   prepareHtml = () => {
-    // eslint-disable-next-line no-eval
-    const re = eval('/(' + this.config.tag_start + ')[\\s\\S]*?(' + this.config.tag_end + ')/g');
+    const re = new RegExp(
+      `(${this.escapeRegex(this.config.tag_start)})[\\s\\S]*?(${this.escapeRegex(this.config.tag_end)})`,
+      'g'
+    );
 
     return this.readmeMD
       .replace(re, `$1\n${this.skillsHtml}\n$2`);
@@ -162,7 +172,14 @@ class SkillSet {
       this.readmeHTML = this.prepareHtml();
       await this.writeReadmeFile();
     } catch (error) {
-      console.log(error);
+      if (error.code === 'ENOENT') {
+        console.error(`File not found: ${error.path}`);
+      } else if (error instanceof yaml.YAMLException) {
+        console.error(`YAML parsing error: ${error.message}`);
+      } else {
+        console.error(`Error: ${error.message}`);
+      }
+      throw error;
     }
   }
 }
