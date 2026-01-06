@@ -3,41 +3,78 @@
  * @author John Valai <git@jvk.to>
  */
 
-import fs from 'fs/promises'
+import fs from 'fs/promises';
 import yaml from 'js-yaml';
 import pug from 'pug';
+import pino from 'pino';
+
+/**
+ * @typedef {Object} SkillSetConfig
+ * @property {string} datafile - Path to YAML data file containing skills
+ * @property {string} tpl_section - Path to section Pug template
+ * @property {string} tpl_icon - Path to icon Pug template
+ * @property {string} tag_start - Start placeholder tag in README template
+ * @property {string} tag_end - End placeholder tag in README template
+ * @property {string} file_input - Input README template path
+ * @property {string} file_output - Output README path
+ */
+
+/**
+ * @typedef {Object} Skill
+ * @property {string} name - Name of the skill/technology
+ * @property {string} url - URL for the skill badge
+ * @property {string} color - Hex color code for the badge
+ */
 
 /** @class SkillSet
  *
- * Defines a class called SkillSet that generates a list of skillset icons and insert them into a template to create a README.md file.
+ * Generates a list of skillset icons and inserts them into a template to create a README.md file.
  *
  * @requires module:fs/promises
  * @requires module:js-yaml
  * @requires module:pug
-*/
+ * @requires module:pino
+ */
 class SkillSet {
+  /** @type {SkillSetConfig} */
+  #config;
+  /** @type {string} */
+  #skillsHtml = '';
+  /** @type {string} */
+  #readmeMD = '';
+  /** @type {string} */
+  #readmeHTML = '';
+  /** @type {Object.<string, Skill[]>} */
+  #skillsData = {};
+  /** @type {pino.Logger} */
+  #logger;
+
   /**
-   * Defines a constructor that takes a config object as a parameter and sets the default and custom properties for the instance.
+   * Creates a new SkillSet instance.
    *
-   * @param {Object} config - Settings used to configure how README.md is generated
+   * @param {SkillSetConfig} config - Settings used to configure how README.md is generated
+   * @param {Object} [options] - Additional options
+   * @param {boolean} [options.silent=false] - Suppress log output
    * @constructor
-   * @memberof SkillSet
    * @throws {Error} If required config fields are missing
    */
-  constructor (config) {
+  constructor(config, options = {}) {
     // Validate required config fields
     const requiredFields = ['datafile', 'file_input', 'file_output', 'tag_start', 'tag_end', 'tpl_section', 'tpl_icon'];
     const missing = requiredFields.filter(field => !config[field]);
-    
+
     if (missing.length > 0) {
       throw new Error(`Missing required config fields: ${missing.join(', ')}`);
     }
 
-    this.config = { ...config };
-    this.skillsHtml = '';
-    this.readmeMD = '';
-    this.readmeHTML = '';
-    this.skills_data = {};
+    this.#config = { ...config };
+    this.#logger = pino({
+      level: options.silent ? 'silent' : 'info',
+      transport: options.silent ? undefined : {
+        target: 'pino-pretty',
+        options: { colorize: true }
+      }
+    });
   }
 
   /**
@@ -63,9 +100,9 @@ class SkillSet {
    * @memberof SkillSet
    */
   getData = async () => {
-    const data = fs.readFile(this.config.datafile, 'utf8');
+    const data = fs.readFile(this.#config.datafile, 'utf8');
     const result = await data;
-    console.info('Loaded yaml skillset data from <' + this.config.datafile + '>');
+    this.#logger.info(`Loaded yaml skillset data from <${this.#config.datafile}>`);
     return await yaml.load(result).Skillset;
   }
 
@@ -79,10 +116,10 @@ class SkillSet {
    */
   renderSkillsHtml = () => {
     let html = '';
-    const skillset = this.skills_data;
+    const skillset = this.#skillsData;
     const topics = Object.keys(skillset);
-    const tplSection = pug.compileFile(this.config.tpl_section);
-    const tplIcon = pug.compileFile(this.config.tpl_icon);
+    const tplSection = pug.compileFile(this.#config.tpl_section);
+    const tplIcon = pug.compileFile(this.#config.tpl_icon);
 
     topics.forEach((topic) => {
       const thisTopic = skillset[topic];
@@ -102,7 +139,7 @@ class SkillSet {
         icons: iconsHtml
       });
     });
-    console.info('Rendered skillset html.');
+    this.#logger.info('Rendered skillset html.');
 
     return html;
   }
@@ -117,8 +154,8 @@ class SkillSet {
    * @memberof SkillSet
    */
   getReadmeFile = async () => {
-    const data = await fs.readFile(this.config.file_input, 'utf8');
-    console.info('Loaded file: <' + this.config.file_input + '>');
+    const data = await fs.readFile(this.#config.file_input, 'utf8');
+    this.#logger.info(`Loaded file: <${this.#config.file_input}>`);
     return data;
   }
 
@@ -132,12 +169,12 @@ class SkillSet {
    * */
   prepareHtml = () => {
     const re = new RegExp(
-      `(${this.escapeRegex(this.config.tag_start)})[\\s\\S]*?(${this.escapeRegex(this.config.tag_end)})`,
+      `(${this.escapeRegex(this.#config.tag_start)})[\\s\\S]*?(${this.escapeRegex(this.#config.tag_end)})`,
       'g'
     );
 
-    return this.readmeMD
-      .replace(re, `$1\n${this.skillsHtml}\n$2`);
+    return this.#readmeMD
+      .replace(re, `$1\n${this.#skillsHtml}\n$2`);
   }
 
   /**
@@ -151,8 +188,8 @@ class SkillSet {
    *
    */
   writeReadmeFile = async () => {
-    const readFile = await fs.writeFile(this.config.file_output, this.readmeHTML);
-    console.info('Wrote output to file: <' + this.config.file_output + '>');
+    const readFile = await fs.writeFile(this.#config.file_output, this.#readmeHTML);
+    this.#logger.info(`Wrote output to file: <${this.#config.file_output}>`);
     return readFile;
   }
 
@@ -166,18 +203,18 @@ class SkillSet {
    */
   renderReadme = async () => {
     try {
-      this.skills_data = await this.getData();
-      this.skillsHtml = this.renderSkillsHtml();
-      this.readmeMD = await this.getReadmeFile();
-      this.readmeHTML = this.prepareHtml();
+      this.#skillsData = await this.getData();
+      this.#skillsHtml = this.renderSkillsHtml();
+      this.#readmeMD = await this.getReadmeFile();
+      this.#readmeHTML = this.prepareHtml();
       await this.writeReadmeFile();
     } catch (error) {
       if (error.code === 'ENOENT') {
-        console.error(`File not found: ${error.path}`);
+        this.#logger.error(`File not found: ${error.path}`);
       } else if (error instanceof yaml.YAMLException) {
-        console.error(`YAML parsing error: ${error.message}`);
+        this.#logger.error(`YAML parsing error: ${error.message}`);
       } else {
-        console.error(`Error: ${error.message}`);
+        this.#logger.error(`Error: ${error.message}`);
       }
       throw error;
     }
