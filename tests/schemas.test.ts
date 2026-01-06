@@ -298,7 +298,7 @@ describe('validateSkillsYaml', () => {
       },
     };
     const result = validateSkillsYaml(input);
-    expect(result.Skillset.Languages[0].name).toBe('javascript');
+    expect(result.Skillset['Languages']?.[0]?.name).toBe('javascript');
   });
 
   test('should throw for invalid input', () => {
@@ -316,7 +316,7 @@ describe('safeValidateSkillsYaml', () => {
     const result = safeValidateSkillsYaml(input);
     expect(result.success).toBe(true);
     if (result.success) {
-      expect(result.data.Skillset.Languages[0].name).toBe('javascript');
+      expect(result.data.Skillset['Languages']?.[0]?.name).toBe('javascript');
     }
   });
 
