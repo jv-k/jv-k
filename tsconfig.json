@@ -44,6 +44,6 @@
     /* Custom Type Declarations */
     "typeRoots": ["./node_modules/@types", "./types"]
   },
-  "include": ["src/**/*", "tests/**/*", "types/**/*", "*.mjs"],
+  "include": ["src/**/*", "tests/**/*", "types/**/*", "*.mjs", "eslint.config.mjs"],
   "exclude": ["node_modules", "build"]
 }
