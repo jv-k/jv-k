@@ -49,10 +49,7 @@ const checkColors = async (): Promise<void> => {
   };
 
   // Recursively validate all nodes in the YAML object
-  const validateYaml = (
-    obj: Record<string, unknown>,
-    path = ''
-  ): string[] => {
+  const validateYaml = (obj: Record<string, unknown>, path = ''): string[] => {
     let errors: string[] = [];
 
     for (const key in obj) {
@@ -60,14 +57,10 @@ const checkColors = async (): Promise<void> => {
       const value = obj[key];
 
       if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
-        errors = errors.concat(
-          validateYaml(value as Record<string, unknown>, fullPath)
-        );
+        errors = errors.concat(validateYaml(value as Record<string, unknown>, fullPath));
       } else if (typeof value === 'string' && /^#[0-9a-fA-F]{6}$/.test(value)) {
         if (!isProperlyQuotedColor(value)) {
-          errors.push(
-            `Color value at ${fullPath} is not properly quoted: ${value}`
-          );
+          errors.push(`Color value at ${fullPath} is not properly quoted: ${value}`);
         }
       }
     }

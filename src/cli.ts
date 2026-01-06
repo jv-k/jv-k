@@ -29,12 +29,19 @@ program
   .name('jv-k')
   .description('Generate a README.md with dynamic skillset icons')
   .version(pkg.version)
+  .option('-b, --build', 'Build the README file')
   .option('-c, --config <path>', 'Path to config file', './src/config.yaml')
   .option('-e, --env <environment>', 'Config environment to use', 'default')
   .option('-o, --output <path>', 'Override output file path')
   .option('-s, --silent', 'Suppress log output', false)
   .option('-v, --verbose', 'Enable verbose logging', false)
   .action(async (options: CliOptions) => {
+    // Show help if no build flag
+    if (!options.build) {
+      program.help();
+      return;
+    }
+
     try {
       // Load config
       const config = configLoad<SkillSetConfig>(options.config, options.env);

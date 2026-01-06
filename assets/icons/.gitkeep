@@ -1,0 +1,3 @@
+# This directory contains locally-cached SVG icons from simple-icons
+# Icons are fetched at build time by scripts/fetch-icons.ts
+# See assets/icons/manifest.json for version tracking

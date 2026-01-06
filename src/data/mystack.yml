@@ -1,8 +1,6 @@
+---
 Skillset:
-  Languages:
-    - name: javascript
-      color: '#F7DF1E'
-      url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  'Languages':
     - name: typescript
       color: '#3178C6'
       url: https://www.typescriptlang.org/
@@ -18,13 +16,10 @@ Skillset:
     - name: csharp
       color: '#239120'
       url: https://www.w3schools.com/cs/
-    - name: cplusplus
-      color: '#00599C'
-      url: https://www.w3schools.com/cpp/
-    - name: rust
-      color: '#000000'
-      url: https://www.rust-lang.org/
-  Backend:
+    - name: go
+      color: '#00ADD8'
+      url: https://golang.org/
+  'Backend':
     - name: nodedotjs
       color: '#339933'
       url: https://nodejs.dev/
@@ -79,7 +74,7 @@ Skillset:
     - name: jasmine
       color: '#8A4182'
       url: https://jasmine.github.io/
-  Frontend:
+  'Frontend':
     - name: react
       color: '#61DAFB'
       url: https://reactjs.org
@@ -104,18 +99,6 @@ Skillset:
     - name: gatsby
       color: '#663399'
       url: https://www.gatsbyjs.com/
-    - name: mui
-      color: '#007FFF'
-      url: https://mui.com/
-    - name: materialdesign
-      color: '#757575'
-      url: https://material.io/design
-    - name: chartdotjs
-      color: '#FF6384'
-      url: https://www.chartjs.org/
-    - name: d3dotjs
-      color: '#F9A03C'
-      url: https://d3js.org/
     - name: pug
       color: '#A86454'
       url: https://pugjs.org
@@ -148,7 +131,7 @@ Skillset:
     - name: redux
       color: '#764ABC'
       url: https://redux.js.org
-  API:
+  'API':
     - name: graphql
       color: '#E10098'
       url: https://graphql.org/
@@ -158,7 +141,7 @@ Skillset:
     - name: trpc
       color: '#2596BE'
       url: https://trpc.io/
-  DevOps:
+  'DevOps':
     - name: gnubash
       color: '#4EAA25'
       url: https://www.gnu.org/software/bash/
@@ -171,7 +154,7 @@ Skillset:
     - name: vagrant
       color: '#1868F2'
       url: https://www.vagrantup.com/
-  DBs:
+  'DBs':
     - name: mongodb
       color: '#47A248'
       url: https://www.mongodb.com/
@@ -181,7 +164,7 @@ Skillset:
     - name: postgresql
       color: '#4169E1'
       url: https://www.postgresql.org/
-  Cloud:
+  'Cloud':
     - name: microsoftazure
       color: '#0078D4'
       url: https://azure.microsoft.com/
@@ -194,14 +177,26 @@ Skillset:
     - name: netlify
       color: '#00C7B7'
       url: https://www.netlify.com/
-  CLI:
+  'CLI':
     - name: zsh
       color: '#F15A24'
       url: https://ohmyz.sh/
     - name: tmux
       color: '#1BB91F'
       url: https://github.com/tmux/tmux
-  ML/DS:
+  'AI / ML':
+    - name: langchain
+      color: '#1C3C3C'
+      url: https://langchain.com/
+    - name: googlegemini
+      color: '#8E75B2'
+      url: https://openai.com/
+    - name: huggingface
+      color: '#FFD21E'
+      url: https://huggingface.co/
+    - name: claude
+      color: '#D97757'
+      url: https://www.anthropic.com/
     - name: jupyter
       color: '#F37626'
       url: https://jupyter.org/
@@ -220,6 +215,12 @@ Skillset:
     - name: anaconda
       color: '#44A833'
       url: https://www.anaconda.com/
+    - name: n8n
+      color: '#EA4B71'
+      url: https://n8n.io/
+    - name: mcp
+      color: '#000000'
+      url: https://www.mcp.ai/
   Graphics:
     - name: adobephotoshop
       color: '#31A8FF'
@@ -258,7 +259,7 @@ Skillset:
       url: https://ubuntu.com/
     - name: windows
       color: '#00a1f1'
-      url: ''
+      url: https://www.microsoft.com/windows
   Hardware:
     - name: arduino
       color: '#00878F'

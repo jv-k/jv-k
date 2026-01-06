@@ -13,11 +13,21 @@
   "scripts": {
     "start": "bun ./src/cli.ts",
     "build": "bun ./src/main.ts",
+    "prebuild": "bun run fetch-icons",
+    "fetch-icons": "bun ./src/fetch-icons.ts",
+    "fetch-icons:fresh": "rm -rf assets/icons && bun ./src/fetch-icons.ts",
+    "fetch-icons:help": "bun ./src/fetch-icons.ts --help",
     "watch": "nodemon --ext ts --exec bun run build",
+    "validate": "bun run typecheck && bun run lint",
     "test": "bun test --ci",
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun test --coverage",
     "test:yaml": "bun ./tests/test.yaml.ts",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:yaml": "yamllint src/data/mystack.yml",
     "typecheck": "tsc --noEmit",
+    "ci": "bun run typecheck && bun run lint && bun run test",
     "bump": "ver-bump -b"
   },
   "dependencies": {
@@ -26,7 +36,8 @@
     "node-yaml-config": "^1.0.0",
     "pino": "^9.0.0",
     "pino-pretty": "^11.0.0",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "zod": "^4.3.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",

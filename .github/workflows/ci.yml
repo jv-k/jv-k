@@ -1,89 +1,74 @@
-name: Generate Icons
+name: Build Icons & README
 
 on:
   push:
-
+    paths:
+      - "src/data/mystack.yml"
+      - "src/templates/**"
+      - "scripts/**"
+      - "package.json"
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
-  test_yaml:
-    name: Run tests
+  build:
+    name: Fetch Icons & Build README
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Update packages
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install -y git python3
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
 
-      - name: Install Linter
-        run: pip install -r requirements.txt
+      - name: Cache Bun dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('bun.lockb') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
 
-      - name: Install NPM packages
-        run: npm install
+      - name: Install dependencies
+        run: bun install
 
-      - name: Test Yaml stack data
-        run: npm run test:yaml
+      - name: Install yamllint
+        run: pip install yamllint
 
-  build:
-    name: Build readme.md
-    needs: test_yaml
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - name: Test YAML data
+        run: bun run test:yaml
 
-      - name: Install NPM packages
-        run: npm install
+      - name: Fetch icons with version fallback
+        run: bun run fetch-icons
 
       - name: Build readme.md
         run: |
-          npm run build
+          bun run build
           cat ./build/readme.md
 
-      # save artifact for next job
-      - uses: actions/upload-artifact@v4
-        with:
-          name: readme-artifact
-          path: ./build/readme.md
+      - name: Copy README to repo root
+        run: cp ./build/readme.md ./readme.md
 
-  commit_changes:
-    name: Commit changes back to repo
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: Configure git to trust the workspace despite the different owner
+      - name: Configure git
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
-
-      - name: Copy the name & email from the last commit
-        run: |
-          git config --local user.email "$(git log --format='%ae' HEAD^\!)"
-          git config --local user.name "$(git log --format='%an' HEAD^\!)"
-
-        # grab previous artifact, save it in repo root
-      - uses: actions/download-artifact@v4
-        with:
-          name: readme-artifact
-          path: ./
+          git config --local user.email "$(git log --format='%ae' HEAD^!)"
+          git config --local user.name "$(git log --format='%an' HEAD^!)"
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
           default_author: user_info
-          message: 'docs: build readme.md'
-          add: './readme.md'
+          message: "build: update icons and readme"
+          add: |
+            ./readme.md
+            ./assets/icons/
           push: origin main
 
       - name: Display Results
-        run: |
-          git show --summary
+        run: git show --summary

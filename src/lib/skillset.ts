@@ -6,7 +6,7 @@
 import fs from 'fs/promises';
 import yaml from 'js-yaml';
 import pug from 'pug';
-import pino, { type Logger } from 'pino';
+import { createLogger, type Logger } from './logger.js';
 
 import type {
   SkillSetConfig,
@@ -51,18 +51,7 @@ class SkillSet {
     }
 
     this.#config = { ...config };
-
-    if (options.silent) {
-      this.#logger = pino({ level: 'silent' });
-    } else {
-      this.#logger = pino({
-        level: 'info',
-        transport: {
-          target: 'pino-pretty',
-          options: { colorize: true },
-        },
-      });
-    }
+    this.#logger = createLogger(options.silent);
   }
 
   /**
@@ -132,7 +121,9 @@ class SkillSet {
    */
   prepareHtml = (): string => {
     const re = new RegExp(
-      `(${this.escapeRegex(this.#config.tag_start)})[\\s\\S]*?(${this.escapeRegex(this.#config.tag_end)})`,
+      `(${this.escapeRegex(this.#config.tag_start)})[\\s\\S]*?(${this.escapeRegex(
+        this.#config.tag_end
+      )})`,
       'g'
     );
 
