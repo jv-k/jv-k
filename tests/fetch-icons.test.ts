@@ -1,168 +1,138 @@
 /**
  * @fileoverview Unit tests for fetch-icons utilities
+ *
+ * These tests validate the utility functions used by fetch-icons.ts
+ * via the IconFetcherService. The service now exposes these functions
+ * for testability.
+ *
  * @author John Valai <git@jvk.to>
  */
 
 import { describe, test, expect } from 'bun:test';
+import { IconFetcherService } from '../src/lib/icon-fetcher.service.js';
+import { createLogger } from '../src/lib/logger.js';
+import type { SkillSetConfig } from '../src/schemas/index.js';
+import yaml from 'js-yaml';
+import fs from 'fs';
 
-// Since fetch-icons.ts doesn't export its utilities, we'll test the logic
-// by testing the normalized color and hash functions we can recreate
+// ============================================================================
+// Test Fixtures
+// ============================================================================
 
-/**
- * Hash function matching fetch-icons.ts implementation
- */
-function hashContent(content: string): string {
-  let hash = 0;
-  for (let i = 0; i < content.length; i++) {
-    const char = content.charCodeAt(i);
-    hash = (hash << 5) - hash + char;
-    hash = hash & hash;
-  }
-  return `sha256:${Math.abs(hash).toString(16).padStart(8, '0')}`;
-}
+// Load the actual config.yaml to ensure tests are based on real settings
+const configPath = './src/config.yaml';
+const config_content = fs.readFileSync(configPath, 'utf8');
+const config = yaml.load(config_content) as { default: SkillSetConfig };
 
-/**
- * Color normalization matching fetch-icons.ts
- */
-function normalizeColor(color: string): string {
-  const hex = color.replace(/^#/, '');
+const logger = createLogger(true); // Silent logger
+const service = new IconFetcherService({ config: config.default, logger });
 
-  if (/^[A-Fa-f0-9]{3}$/.test(hex)) {
-    return hex
-      .split('')
-      .map((c) => c + c)
-      .join('');
-  }
-
-  if (/^[A-Fa-f0-9]{6}$/.test(hex)) {
-    return hex;
-  }
-
-  return '000000';
-}
-
-/**
- * SVG color application matching fetch-icons.ts
- */
-function applyColorToSvg(svg: string, hexColor: string): string {
-  const normalizedHex = normalizeColor(hexColor);
-  let modifiedSvg = svg.replace(/<svg([^>]*)\sfill="[^"]*"/, '<svg$1');
-  modifiedSvg = modifiedSvg.replace('<svg', `<svg fill="#${normalizedHex}"`);
-  return modifiedSvg;
-}
-
-/**
- * Placeholder SVG generation matching fetch-icons.ts
- */
-function generatePlaceholderSvg(slug: string): string {
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#cccccc" role="img" aria-label="${slug} (not found)">
-  <circle cx="12" cy="12" r="10" stroke="#999999" stroke-width="1" fill="none"/>
-  <text x="12" y="16" text-anchor="middle" font-size="10" fill="#999999">?</text>
-</svg>`;
-}
+// ============================================================================
+// Tests
+// ============================================================================
 
 describe('hashContent', () => {
   test('should generate consistent hashes', () => {
     const content = '<svg>test</svg>';
-    const hash1 = hashContent(content);
-    const hash2 = hashContent(content);
+    const hash1 = service.hashContent(content);
+    const hash2 = service.hashContent(content);
     expect(hash1).toBe(hash2);
   });
 
   test('should generate different hashes for different content', () => {
-    const hash1 = hashContent('<svg>content1</svg>');
-    const hash2 = hashContent('<svg>content2</svg>');
+    const hash1 = service.hashContent('<svg>content1</svg>');
+    const hash2 = service.hashContent('<svg>content2</svg>');
     expect(hash1).not.toBe(hash2);
   });
 
   test('should have sha256 prefix', () => {
-    const hash = hashContent('test');
+    const hash = service.hashContent('test');
     expect(hash).toStartWith('sha256:');
   });
 
-  test('should have 8 character hex after prefix', () => {
-    const hash = hashContent('test');
+  test('should have 16-character hex after prefix (true SHA-256 truncated)', () => {
+    const hash = service.hashContent('test');
     const hexPart = hash.replace('sha256:', '');
-    expect(hexPart).toHaveLength(8);
+    expect(hexPart).toHaveLength(16);
     expect(/^[0-9a-f]+$/.test(hexPart)).toBe(true);
   });
 });
 
 describe('normalizeColor', () => {
   test('should remove # prefix from 6-digit hex', () => {
-    expect(normalizeColor('#FF5733')).toBe('FF5733');
+    expect(service.normalizeColor('#FF5733')).toBe('FF5733');
   });
 
   test('should handle 6-digit hex without #', () => {
-    expect(normalizeColor('FF5733')).toBe('FF5733');
+    expect(service.normalizeColor('FF5733')).toBe('FF5733');
   });
 
   test('should expand 3-digit hex to 6-digit', () => {
-    expect(normalizeColor('#FFF')).toBe('FFFFFF');
-    expect(normalizeColor('ABC')).toBe('AABBCC');
-    expect(normalizeColor('#123')).toBe('112233');
+    expect(service.normalizeColor('#FFF')).toBe('FFFFFF');
+    expect(service.normalizeColor('ABC')).toBe('AABBCC');
+    expect(service.normalizeColor('#123')).toBe('112233');
   });
 
   test('should return black for invalid colors', () => {
-    expect(normalizeColor('invalid')).toBe('000000');
-    expect(normalizeColor('')).toBe('000000');
-    expect(normalizeColor('#12345')).toBe('000000');
-    expect(normalizeColor('GGGGGG')).toBe('000000');
+    expect(service.normalizeColor('invalid')).toBe('000000');
+    expect(service.normalizeColor('')).toBe('000000');
+    expect(service.normalizeColor('#12345')).toBe('000000');
+    expect(service.normalizeColor('GGGGGG')).toBe('000000');
   });
 
   test('should handle lowercase hex', () => {
-    expect(normalizeColor('#aabbcc')).toBe('aabbcc');
-    expect(normalizeColor('abc')).toBe('aabbcc');
+    expect(service.normalizeColor('#aabbcc')).toBe('aabbcc');
+    expect(service.normalizeColor('abc')).toBe('aabbcc');
   });
 });
 
 describe('applyColorToSvg', () => {
   test('should add fill attribute to svg without existing fill', () => {
     const svg = '<svg viewBox="0 0 24 24"><path d="M0 0"/></svg>';
-    const result = applyColorToSvg(svg, '#FF5733');
+    const result = service.applyColorToSvg(svg, '#FF5733');
     expect(result).toContain('fill="#FF5733"');
     expect(result).toStartWith('<svg fill="#FF5733"');
   });
 
   test('should replace existing fill attribute', () => {
     const svg = '<svg fill="#000000" viewBox="0 0 24 24"><path d="M0 0"/></svg>';
-    const result = applyColorToSvg(svg, '#FF5733');
+    const result = service.applyColorToSvg(svg, '#FF5733');
     expect(result).toContain('fill="#FF5733"');
     expect(result).not.toContain('fill="#000000"');
   });
 
   test('should normalize color before applying', () => {
     const svg = '<svg viewBox="0 0 24 24"><path d="M0 0"/></svg>';
-    const result = applyColorToSvg(svg, '#FFF');
+    const result = service.applyColorToSvg(svg, '#FFF');
     expect(result).toContain('fill="#FFFFFF"');
   });
 
   test('should use black for invalid colors', () => {
     const svg = '<svg viewBox="0 0 24 24"><path d="M0 0"/></svg>';
-    const result = applyColorToSvg(svg, 'invalid');
+    const result = service.applyColorToSvg(svg, 'invalid');
     expect(result).toContain('fill="#000000"');
   });
 });
 
 describe('generatePlaceholderSvg', () => {
   test('should include slug in aria-label', () => {
-    const svg = generatePlaceholderSvg('myicon');
+    const svg = service.generatePlaceholderSvg('myicon');
     expect(svg).toContain('aria-label="myicon (not found)"');
   });
 
   test('should have placeholder styling', () => {
-    const svg = generatePlaceholderSvg('test');
+    const svg = service.generatePlaceholderSvg('test');
     expect(svg).toContain('fill="#cccccc"');
     expect(svg).toContain('stroke="#999999"');
   });
 
   test('should have question mark indicator', () => {
-    const svg = generatePlaceholderSvg('test');
+    const svg = service.generatePlaceholderSvg('test');
     expect(svg).toContain('>?</text>');
   });
 
   test('should be valid SVG structure', () => {
-    const svg = generatePlaceholderSvg('test');
+    const svg = service.generatePlaceholderSvg('test');
     expect(svg).toContain('<svg');
     expect(svg).toContain('</svg>');
     expect(svg).toContain('xmlns="http://www.w3.org/2000/svg"');
@@ -175,8 +145,8 @@ describe('Icon manifest integration', () => {
     // Simulate what fetch-icons creates
     const entry = {
       version: '16',
-      color: normalizeColor('#F7DF1E'),
-      hash: hashContent('<svg>test</svg>'),
+      color: service.normalizeColor('#F7DF1E'),
+      hash: service.hashContent('<svg>test</svg>'),
       fetchedAt: new Date().toISOString(),
     };
 
