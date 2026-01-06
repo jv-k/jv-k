@@ -51,6 +51,8 @@ export interface SkillsYamlRoot {
  * CLI options parsed by Commander
  */
 export interface CliOptions {
+  /** Build the README file */
+  build?: boolean;
   /** Path to config file */
   config: string;
   /** Config environment to use */
@@ -91,4 +93,68 @@ export interface SectionTemplateData {
 export interface SkillSetOptions {
   /** Suppress log output */
   silent?: boolean;
+}
+
+// ============================================================================
+// Icon Fetcher Types
+// ============================================================================
+
+/**
+ * Icon requirement from YAML data
+ */
+export interface IconRequirement {
+  /** Icon slug (e.g., 'javascript', 'typescript') */
+  slug: string;
+  /** Hex color code */
+  color: string;
+}
+
+/**
+ * Entry in the icon manifest file
+ */
+export interface IconManifestEntry {
+  /** simple-icons version the icon was fetched from */
+  version: string;
+  /** Hex color applied to the SVG */
+  color: string;
+  /** Hash of the SVG content */
+  hash: string;
+  /** ISO timestamp of when the icon was fetched */
+  fetchedAt: string;
+}
+
+/**
+ * Icon manifest structure (assets/icons/manifest.json)
+ */
+export interface IconManifest {
+  /** ISO timestamp of when the manifest was generated */
+  generatedAt: string;
+  /** Latest simple-icons version at generation time */
+  simpleIconsLatest: string;
+  /** Map of icon slug to manifest entry */
+  icons: Record<string, IconManifestEntry>;
+}
+
+/**
+ * Result of fetching a single icon
+ */
+export interface IconFetchResult {
+  /** Icon slug */
+  slug: string;
+  /** SVG content */
+  svg: string;
+  /** Version the icon was found in */
+  version: string;
+  /** Whether the fetch was successful */
+  success: boolean;
+  /** Error message if failed */
+  error?: string;
+}
+
+/**
+ * simple-icons package version info from jsDelivr API
+ */
+export interface PackageVersionInfo {
+  /** Array of available versions */
+  versions: { version: string }[];
 }

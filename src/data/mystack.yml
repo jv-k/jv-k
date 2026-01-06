@@ -258,7 +258,7 @@ Skillset:
       url: https://ubuntu.com/
     - name: windows
       color: '#00a1f1'
-      url: ''
+      url: https://www.microsoft.com/windows
   Hardware:
     - name: arduino
       color: '#00878F'

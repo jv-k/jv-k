@@ -121,7 +121,9 @@ class SkillSet {
    */
   prepareHtml = (): string => {
     const re = new RegExp(
-      `(${this.escapeRegex(this.#config.tag_start)})[\\s\\S]*?(${this.escapeRegex(this.#config.tag_end)})`,
+      `(${this.escapeRegex(this.#config.tag_start)})[\\s\\S]*?(${this.escapeRegex(
+        this.#config.tag_end
+      )})`,
       'g'
     );
 

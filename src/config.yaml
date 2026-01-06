@@ -13,3 +13,22 @@ default:
     ./src/templates/readme.tpl.md
   file_output:
     ./build/readme.md
+  # Icon fetcher settings
+  icons_output_dir:
+    ./assets/icons
+  icons_manifest_path:
+    ./assets/icons/manifest.json
+  icons_cdn_base_url:
+    https://cdn.jsdelivr.net/npm/simple-icons
+  icons_package_api_url:
+    https://data.jsdelivr.net/v1/packages/npm/simple-icons
+  icons_fallback_cdn_url:
+    https://unpkg.com/simple-icons
+  icons_concurrency_limit:
+    10
+  icons_request_timeout:
+    10000
+  icons_max_retries:
+    3
+  icons_min_major_version:
+    1
