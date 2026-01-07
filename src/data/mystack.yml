@@ -135,6 +135,9 @@ Skillset:
     - name: graphql
       color: '#E10098'
       url: https://graphql.org/
+    - name: fastapi
+      color: #009688
+      URL: https://fastapi.tiangolo.com/
     - name: postman
       color: '#FF6C37'
       url: https://www.postman.com/
