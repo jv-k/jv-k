@@ -121,7 +121,7 @@ Skillset:
       color: '#0055FF'
       url: https://www.framer.com/motion/
     - name: radixui
-      color: '#161618'
+      color: '#333'
       url: https://www.radix-ui.com/
   'Cross Platform':
     - name: electron
@@ -188,7 +188,7 @@ Skillset:
       color: '#F05032'
       url: https://git-scm.com/
     - name: github
-      color: '#181717'
+      color: '#333'
       url: https://github.com/
     - name: githubactions
       color: '#2088FF'

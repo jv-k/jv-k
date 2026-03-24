@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T04:04:53.867Z",
+  "generatedAt": "2026-03-24T04:42:43.948Z",
   "simpleIconsLatest": "unknown",
   "icons": {
     "typescript": {
@@ -236,12 +236,6 @@
       "hash": "sha256:a4e3c4d0edab0a63",
       "fetchedAt": "2026-03-24T03:26:15.319Z"
     },
-    "radixui": {
-      "version": "16",
-      "color": "161618",
-      "hash": "sha256:23438d006b4c56b7",
-      "fetchedAt": "2026-03-24T03:26:15.319Z"
-    },
     "electron": {
       "version": "16",
       "color": "47848F",
@@ -361,12 +355,6 @@
       "color": "F05032",
       "hash": "sha256:bec029d24079e427",
       "fetchedAt": "2026-03-24T03:26:15.319Z"
-    },
-    "github": {
-      "version": "16",
-      "color": "181717",
-      "hash": "sha256:476ba7aa67b86da7",
-      "fetchedAt": "2026-03-24T03:26:15.322Z"
     },
     "githubactions": {
       "version": "16",
@@ -661,6 +649,18 @@
       "color": "7C3AED",
       "hash": "sha256:ed662a9b6d1a5d99",
       "fetchedAt": "2026-03-24T03:26:15.821Z"
+    },
+    "github": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:da079fef9f041b6e",
+      "fetchedAt": "2026-03-24T04:42:44.040Z"
+    },
+    "radixui": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:6d905cc74ccda512",
+      "fetchedAt": "2026-03-24T04:42:44.040Z"
     }
   }
 }
