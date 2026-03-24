@@ -19,6 +19,12 @@ Skillset:
     - name: go
       color: '#00ADD8'
       url: https://golang.org/
+    - name: rust
+      color: '#000000'
+      url: https://www.rust-lang.org/
+    - name: ruby
+      color: '#CC342D'
+      url: https://www.ruby-lang.org/
   'Backend':
     - name: nodedotjs
       color: '#339933'
@@ -74,6 +80,12 @@ Skillset:
     - name: jasmine
       color: '#8A4182'
       url: https://jasmine.github.io/
+    - name: vitest
+      color: '#6E9F18'
+      url: https://vitest.dev/
+    - name: playwright
+      color: '#2EAD33'
+      url: https://playwright.dev/
   'Frontend':
     - name: react
       color: '#61DAFB'
@@ -108,6 +120,15 @@ Skillset:
     - name: styledcomponents
       color: '#DB7093'
       url: https://styled-components.com/
+    - name: threedotjs
+      color: '#000000'
+      url: https://threejs.org/
+    - name: framer
+      color: '#0055FF'
+      url: https://www.framer.com/motion/
+    - name: radixui
+      color: '#161618'
+      url: https://www.radix-ui.com/
   'Cross Platform':
     - name: electron
       color: '#47848F'
@@ -131,13 +152,25 @@ Skillset:
     - name: redux
       color: '#764ABC'
       url: https://redux.js.org
+    - name: pnpm
+      color: '#F69220'
+      url: https://pnpm.io/
+    - name: turborepo
+      color: '#EF4444'
+      url: https://turbo.build/
+    - name: eslint
+      color: '#4B32C3'
+      url: https://eslint.org/
+    - name: prettier
+      color: '#F7B93E'
+      url: https://prettier.io/
   'API':
     - name: graphql
       color: '#E10098'
       url: https://graphql.org/
     - name: fastapi
       color: '#009688'
-      URL: https://fastapi.tiangolo.com/
+      url: https://fastapi.tiangolo.com/
     - name: postman
       color: '#FF6C37'
       url: https://www.postman.com/
@@ -157,6 +190,15 @@ Skillset:
     - name: vagrant
       color: '#1868F2'
       url: https://www.vagrantup.com/
+    - name: git
+      color: '#F05032'
+      url: https://git-scm.com/
+    - name: github
+      color: '#181717'
+      url: https://github.com/
+    - name: githubactions
+      color: '#2088FF'
+      url: https://github.com/features/actions
   'DBs':
     - name: mongodb
       color: '#47A248'
@@ -167,6 +209,9 @@ Skillset:
     - name: postgresql
       color: '#4169E1'
       url: https://www.postgresql.org/
+    - name: supabase
+      color: '#3FCF8E'
+      url: https://supabase.com/
   'Cloud':
     - name: microsoftazure
       color: '#0078D4'
@@ -180,6 +225,12 @@ Skillset:
     - name: netlify
       color: '#00C7B7'
       url: https://www.netlify.com/
+    - name: vercel
+      color: '#000000'
+      url: https://vercel.com/
+    - name: cloudinary
+      color: '#3448C5'
+      url: https://cloudinary.com/
   'CLI':
     - name: zsh
       color: '#F15A24'
@@ -187,13 +238,16 @@ Skillset:
     - name: tmux
       color: '#1BB91F'
       url: https://github.com/tmux/tmux
+    - name: homebrew
+      color: '#FBB040'
+      url: https://brew.sh/
   'AI / ML':
     - name: langchain
       color: '#1C3C3C'
       url: https://langchain.com/
     - name: googlegemini
       color: '#8E75B2'
-      url: https://openai.com/
+      url: https://gemini.google.com/
     - name: huggingface
       color: '#FFD21E'
       url: https://huggingface.co/
@@ -224,6 +278,15 @@ Skillset:
     - name: mcp
       color: '#000000'
       url: https://www.mcp.ai/
+    - name: openai
+      color: '#412991'
+      url: https://openai.com/
+    - name: google
+      color: '#4285F4'
+      url: https://aistudio.google.com/
+    - name: azuredevops
+      color: '#0078D7'
+      url: https://ai.azure.com/
   Graphics:
     - name: adobephotoshop
       color: '#31A8FF'
@@ -240,6 +303,12 @@ Skillset:
     - name: sketchup
       color: '#005F9E'
       url: https://www.sketchup.com/
+    - name: figma
+      color: '#F24E1E'
+      url: https://www.figma.com/
+    - name: unity
+      color: '#000000'
+      url: https://unity.com/
   Editors:
     - name: visualstudiocode
       color: '#117dcd'
@@ -277,3 +346,9 @@ Skillset:
     - name: arc
       color: '#FCBFBD'
       url: https://arc.net/
+    - name: notion
+      color: '#000000'
+      url: https://www.notion.so/
+    - name: obsidian
+      color: '#7C3AED'
+      url: https://obsidian.md/

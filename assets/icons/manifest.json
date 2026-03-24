@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-06T23:00:31.463Z",
+  "generatedAt": "2026-03-24T03:49:31.965Z",
   "simpleIconsLatest": "unknown",
   "icons": {
     "typescript": {
@@ -37,6 +37,18 @@
       "color": "00ADD8",
       "hash": "sha256:33e31a3d04968375",
       "fetchedAt": "2026-01-06T23:00:09.045Z"
+    },
+    "rust": {
+      "version": "16",
+      "color": "000000",
+      "hash": "sha256:fb4ca7ef56443103",
+      "fetchedAt": "2026-03-24T03:26:15.120Z"
+    },
+    "ruby": {
+      "version": "16",
+      "color": "CC342D",
+      "hash": "sha256:2b0b2bad04afc6b8",
+      "fetchedAt": "2026-03-24T03:26:15.174Z"
     },
     "nodedotjs": {
       "version": "16",
@@ -146,6 +158,18 @@
       "hash": "sha256:3f289d04a4a030ec",
       "fetchedAt": "2026-01-06T23:00:09.362Z"
     },
+    "vitest": {
+      "version": "16",
+      "color": "6E9F18",
+      "hash": "sha256:9adb31d265a9d13e",
+      "fetchedAt": "2026-03-24T03:26:15.298Z"
+    },
+    "playwright": {
+      "version": "12",
+      "color": "2EAD33",
+      "hash": "sha256:a661501b36c4a894",
+      "fetchedAt": "2026-03-24T03:26:15.698Z"
+    },
     "react": {
       "version": "16",
       "color": "61DAFB",
@@ -212,6 +236,24 @@
       "hash": "sha256:b21585f3ae49c492",
       "fetchedAt": "2026-01-06T23:00:09.656Z"
     },
+    "threedotjs": {
+      "version": "16",
+      "color": "000000",
+      "hash": "sha256:b2b8aae1a911d3b9",
+      "fetchedAt": "2026-03-24T03:26:15.319Z"
+    },
+    "framer": {
+      "version": "16",
+      "color": "0055FF",
+      "hash": "sha256:a4e3c4d0edab0a63",
+      "fetchedAt": "2026-03-24T03:26:15.319Z"
+    },
+    "radixui": {
+      "version": "16",
+      "color": "161618",
+      "hash": "sha256:23438d006b4c56b7",
+      "fetchedAt": "2026-03-24T03:26:15.319Z"
+    },
     "electron": {
       "version": "16",
       "color": "47848F",
@@ -254,11 +296,41 @@
       "hash": "sha256:d52acd637e7fafe7",
       "fetchedAt": "2026-01-06T23:00:09.947Z"
     },
+    "pnpm": {
+      "version": "16",
+      "color": "F69220",
+      "hash": "sha256:a35d6a29b3d07249",
+      "fetchedAt": "2026-03-24T03:26:15.206Z"
+    },
+    "turborepo": {
+      "version": "16",
+      "color": "EF4444",
+      "hash": "sha256:a363fbfafa49aba1",
+      "fetchedAt": "2026-03-24T03:26:15.174Z"
+    },
+    "eslint": {
+      "version": "16",
+      "color": "4B32C3",
+      "hash": "sha256:9b020aafb05e7269",
+      "fetchedAt": "2026-03-24T03:26:15.154Z"
+    },
+    "prettier": {
+      "version": "16",
+      "color": "F7B93E",
+      "hash": "sha256:57456de82d7b876c",
+      "fetchedAt": "2026-03-24T03:26:15.341Z"
+    },
     "graphql": {
       "version": "16",
       "color": "E10098",
       "hash": "sha256:15974f9abc894705",
       "fetchedAt": "2026-01-06T23:00:09.810Z"
+    },
+    "fastapi": {
+      "version": "16",
+      "color": "009688",
+      "hash": "sha256:faca76e57b2cb416",
+      "fetchedAt": "2026-03-24T03:26:15.354Z"
     },
     "postman": {
       "version": "16",
@@ -296,6 +368,24 @@
       "hash": "sha256:aeee630fdef2665e",
       "fetchedAt": "2026-01-06T23:00:09.976Z"
     },
+    "git": {
+      "version": "16",
+      "color": "F05032",
+      "hash": "sha256:bec029d24079e427",
+      "fetchedAt": "2026-03-24T03:26:15.319Z"
+    },
+    "github": {
+      "version": "16",
+      "color": "181717",
+      "hash": "sha256:476ba7aa67b86da7",
+      "fetchedAt": "2026-03-24T03:26:15.322Z"
+    },
+    "githubactions": {
+      "version": "16",
+      "color": "2088FF",
+      "hash": "sha256:68e27a7570b9e0f1",
+      "fetchedAt": "2026-03-24T03:26:15.491Z"
+    },
     "mongodb": {
       "version": "16",
       "color": "47A248",
@@ -313,6 +403,12 @@
       "color": "4169E1",
       "hash": "sha256:bc45b1c56d0b1501",
       "fetchedAt": "2026-01-06T23:00:10.102Z"
+    },
+    "supabase": {
+      "version": "16",
+      "color": "3FCF8E",
+      "hash": "sha256:75f9566421d97d4f",
+      "fetchedAt": "2026-03-24T03:26:15.689Z"
     },
     "microsoftazure": {
       "version": "12",
@@ -338,6 +434,18 @@
       "hash": "sha256:f2d591c3a629c6ff",
       "fetchedAt": "2026-01-06T23:00:10.277Z"
     },
+    "vercel": {
+      "version": "16",
+      "color": "000000",
+      "hash": "sha256:075b9d221ef5a7ea",
+      "fetchedAt": "2026-03-24T03:26:15.471Z"
+    },
+    "cloudinary": {
+      "version": "16",
+      "color": "3448C5",
+      "hash": "sha256:9a4a9ee1e9e15a9d",
+      "fetchedAt": "2026-03-24T03:26:15.839Z"
+    },
     "zsh": {
       "version": "16",
       "color": "F15A24",
@@ -349,6 +457,12 @@
       "color": "1BB91F",
       "hash": "sha256:c1816ea5bba0aeca",
       "fetchedAt": "2026-01-06T23:00:10.134Z"
+    },
+    "homebrew": {
+      "version": "16",
+      "color": "FBB040",
+      "hash": "sha256:836fd3c75caec593",
+      "fetchedAt": "2026-03-24T03:26:15.500Z"
     },
     "langchain": {
       "version": "16",
@@ -422,6 +536,18 @@
       "hash": "sha256:0f0d5e252850f9f0",
       "fetchedAt": "2026-01-06T23:00:15.995Z"
     },
+    "openai": {
+      "version": "15",
+      "color": "412991",
+      "hash": "sha256:7800930955052cd5",
+      "fetchedAt": "2026-03-24T03:26:15.489Z"
+    },
+    "azuredevops": {
+      "version": "12",
+      "color": "0078D7",
+      "hash": "sha256:9b5de92222cccde9",
+      "fetchedAt": "2026-03-24T03:26:15.952Z"
+    },
     "adobephotoshop": {
       "version": "13",
       "color": "31A8FF",
@@ -451,6 +577,18 @@
       "color": "005F9E",
       "hash": "sha256:3612885e38f420b8",
       "fetchedAt": "2026-01-06T23:00:10.667Z"
+    },
+    "figma": {
+      "version": "16",
+      "color": "F24E1E",
+      "hash": "sha256:b9171110637bb953",
+      "fetchedAt": "2026-03-24T03:26:15.411Z"
+    },
+    "unity": {
+      "version": "16",
+      "color": "000000",
+      "hash": "sha256:482ae41fa834f340",
+      "fetchedAt": "2026-03-24T03:26:15.492Z"
     },
     "visualstudiocode": {
       "version": "12",
@@ -517,6 +655,24 @@
       "color": "FCBFBD",
       "hash": "sha256:cdfb460c9d2aafe7",
       "fetchedAt": "2026-01-06T23:00:11.877Z"
+    },
+    "notion": {
+      "version": "16",
+      "color": "000000",
+      "hash": "sha256:fdddc8f06178df16",
+      "fetchedAt": "2026-03-24T03:26:15.592Z"
+    },
+    "obsidian": {
+      "version": "16",
+      "color": "7C3AED",
+      "hash": "sha256:ed662a9b6d1a5d99",
+      "fetchedAt": "2026-03-24T03:26:15.821Z"
+    },
+    "google": {
+      "version": "16",
+      "color": "4285F4",
+      "hash": "sha256:147b64b183daad84",
+      "fetchedAt": "2026-03-24T03:49:32.203Z"
     }
   }
 }
