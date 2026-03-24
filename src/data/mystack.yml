@@ -19,21 +19,15 @@ Skillset:
     - name: go
       color: '#00ADD8'
       url: https://golang.org/
-    - name: rust
-      color: '#000000'
-      url: https://www.rust-lang.org/
-    - name: ruby
-      color: '#CC342D'
-      url: https://www.ruby-lang.org/
   'Backend':
     - name: nodedotjs
       color: '#339933'
       url: https://nodejs.dev/
     - name: bun
-      color: '#000000'
+      color: '#333'
       url: https://bun.sh/
     - name: deno
-      color: '#000000'
+      color: '#333'
       url: https://deno.com/
     - name: django
       color: '#092E20'
@@ -106,7 +100,7 @@ Skillset:
       color: '#06B6D4'
       url: https://tailwindcss.com/
     - name: shadcnui
-      color: '#000000'
+      color: '#333'
       url: https://ui.shadcn.com/
     - name: gatsby
       color: '#663399'
@@ -121,7 +115,7 @@ Skillset:
       color: '#DB7093'
       url: https://styled-components.com/
     - name: threedotjs
-      color: '#000000'
+      color: '#333'
       url: https://threejs.org/
     - name: framer
       color: '#0055FF'
@@ -226,7 +220,7 @@ Skillset:
       color: '#00C7B7'
       url: https://www.netlify.com/
     - name: vercel
-      color: '#000000'
+      color: '#333'
       url: https://vercel.com/
     - name: cloudinary
       color: '#3448C5'
@@ -275,9 +269,9 @@ Skillset:
     - name: n8n
       color: '#EA4B71'
       url: https://n8n.io/
-    - name: mcp
-      color: '#000000'
-      url: https://www.mcp.ai/
+    - name: modelcontextprotocol
+      color: '#333'
+      url: https://modelcontextprotocol.io/
     - name: openai
       color: '#412991'
       url: https://openai.com/
@@ -307,7 +301,7 @@ Skillset:
       color: '#F24E1E'
       url: https://www.figma.com/
     - name: unity
-      color: '#000000'
+      color: '#333'
       url: https://unity.com/
   Editors:
     - name: visualstudiocode
@@ -324,7 +318,7 @@ Skillset:
       url: https://www.sublimetext.com/
   OS:
     - name: macos
-      color: '#000000'
+      color: '#333'
       url: https://github.com/apple-oss-distributions/xnu
     - name: linux
       color: '#FCC624'
@@ -347,7 +341,7 @@ Skillset:
       color: '#FCBFBD'
       url: https://arc.net/
     - name: notion
-      color: '#000000'
+      color: '#333'
       url: https://www.notion.so/
     - name: obsidian
       color: '#7C3AED'

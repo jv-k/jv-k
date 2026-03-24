@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T03:55:17.256Z",
+  "generatedAt": "2026-03-24T04:01:41.772Z",
   "simpleIconsLatest": "unknown",
   "icons": {
     "typescript": {
@@ -38,35 +38,11 @@
       "hash": "sha256:33e31a3d04968375",
       "fetchedAt": "2026-01-06T23:00:09.045Z"
     },
-    "rust": {
-      "version": "16",
-      "color": "000000",
-      "hash": "sha256:fb4ca7ef56443103",
-      "fetchedAt": "2026-03-24T03:26:15.120Z"
-    },
-    "ruby": {
-      "version": "16",
-      "color": "CC342D",
-      "hash": "sha256:2b0b2bad04afc6b8",
-      "fetchedAt": "2026-03-24T03:26:15.174Z"
-    },
     "nodedotjs": {
       "version": "16",
       "color": "339933",
       "hash": "sha256:8d6c7b159635393d",
       "fetchedAt": "2026-01-06T23:00:09.042Z"
-    },
-    "bun": {
-      "version": "16",
-      "color": "000000",
-      "hash": "sha256:5e3c90b1eebf0339",
-      "fetchedAt": "2026-01-06T23:00:09.042Z"
-    },
-    "deno": {
-      "version": "16",
-      "color": "000000",
-      "hash": "sha256:c7ea60906f1e7eda",
-      "fetchedAt": "2026-01-06T23:00:09.194Z"
     },
     "django": {
       "version": "16",
@@ -206,12 +182,6 @@
       "hash": "sha256:34074570b0fbe21c",
       "fetchedAt": "2026-01-06T23:00:09.654Z"
     },
-    "shadcnui": {
-      "version": "16",
-      "color": "000000",
-      "hash": "sha256:e51a817da5d32931",
-      "fetchedAt": "2026-01-06T23:00:09.509Z"
-    },
     "gatsby": {
       "version": "16",
       "color": "663399",
@@ -235,12 +205,6 @@
       "color": "DB7093",
       "hash": "sha256:b21585f3ae49c492",
       "fetchedAt": "2026-01-06T23:00:09.656Z"
-    },
-    "threedotjs": {
-      "version": "16",
-      "color": "000000",
-      "hash": "sha256:b2b8aae1a911d3b9",
-      "fetchedAt": "2026-03-24T03:26:15.319Z"
     },
     "framer": {
       "version": "16",
@@ -434,12 +398,6 @@
       "hash": "sha256:f2d591c3a629c6ff",
       "fetchedAt": "2026-01-06T23:00:10.277Z"
     },
-    "vercel": {
-      "version": "16",
-      "color": "000000",
-      "hash": "sha256:075b9d221ef5a7ea",
-      "fetchedAt": "2026-03-24T03:26:15.471Z"
-    },
     "cloudinary": {
       "version": "16",
       "color": "3448C5",
@@ -530,12 +488,6 @@
       "hash": "sha256:2a415d5d2dea1903",
       "fetchedAt": "2026-01-06T23:00:10.563Z"
     },
-    "mcp": {
-      "version": "placeholder",
-      "color": "000000",
-      "hash": "sha256:0f0d5e252850f9f0",
-      "fetchedAt": "2026-01-06T23:00:15.995Z"
-    },
     "openai": {
       "version": "15",
       "color": "412991",
@@ -590,12 +542,6 @@
       "hash": "sha256:b9171110637bb953",
       "fetchedAt": "2026-03-24T03:26:15.411Z"
     },
-    "unity": {
-      "version": "16",
-      "color": "000000",
-      "hash": "sha256:482ae41fa834f340",
-      "fetchedAt": "2026-03-24T03:26:15.492Z"
-    },
     "visualstudiocode": {
       "version": "12",
       "color": "117dcd",
@@ -619,12 +565,6 @@
       "color": "FF9800",
       "hash": "sha256:ebd68b1bdb9b7673",
       "fetchedAt": "2026-01-06T23:00:11.668Z"
-    },
-    "macos": {
-      "version": "16",
-      "color": "000000",
-      "hash": "sha256:7e553075c320649b",
-      "fetchedAt": "2026-01-06T23:00:11.616Z"
     },
     "linux": {
       "version": "16",
@@ -662,17 +602,65 @@
       "hash": "sha256:cdfb460c9d2aafe7",
       "fetchedAt": "2026-01-06T23:00:11.877Z"
     },
-    "notion": {
-      "version": "16",
-      "color": "000000",
-      "hash": "sha256:fdddc8f06178df16",
-      "fetchedAt": "2026-03-24T03:26:15.592Z"
-    },
     "obsidian": {
       "version": "16",
       "color": "7C3AED",
       "hash": "sha256:ed662a9b6d1a5d99",
       "fetchedAt": "2026-03-24T03:26:15.821Z"
+    },
+    "notion": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:8f9b152244f52321",
+      "fetchedAt": "2026-03-24T04:01:41.890Z"
+    },
+    "threedotjs": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:4c8bd83e55d98323",
+      "fetchedAt": "2026-03-24T04:01:41.890Z"
+    },
+    "vercel": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:7925e45845930338",
+      "fetchedAt": "2026-03-24T04:01:41.890Z"
+    },
+    "unity": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:80d735858f7e1a98",
+      "fetchedAt": "2026-03-24T04:01:41.890Z"
+    },
+    "deno": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:9d556bd300bfd227",
+      "fetchedAt": "2026-03-24T04:01:42.092Z"
+    },
+    "macos": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:1f530c1ec278b54f",
+      "fetchedAt": "2026-03-24T04:01:42.340Z"
+    },
+    "shadcnui": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:36f68bb7d26278c3",
+      "fetchedAt": "2026-03-24T04:01:42.395Z"
+    },
+    "bun": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:d3c1ff9b6d9a54d7",
+      "fetchedAt": "2026-03-24T04:01:42.492Z"
+    },
+    "modelcontextprotocol": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:b6ed0efd01b6682e",
+      "fetchedAt": "2026-03-24T04:01:42.492Z"
     }
   }
 }
