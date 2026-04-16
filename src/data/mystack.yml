@@ -225,6 +225,12 @@ Skillset:
     - name: cloudinary
       color: '#3448C5'
       url: https://cloudinary.com/
+    - name: coolify
+      color: '#6B16ED'
+      url: https://coolify.io/
+    - name: hetzner
+      color: '#D50C2D'
+      url: https://www.hetzner.com/
   'CLI':
     - name: zsh
       color: '#F15A24'
