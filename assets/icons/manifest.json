@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T04:44:08.719Z",
+  "generatedAt": "2026-04-16T05:45:02.400Z",
   "simpleIconsLatest": "unknown",
   "icons": {
     "typescript": {
@@ -433,6 +433,18 @@
       "color": "3448C5",
       "hash": "sha256:9a4a9ee1e9e15a9d",
       "fetchedAt": "2026-03-24T03:26:15.839Z"
+    },
+    "coolify": {
+      "version": "16",
+      "color": "6B16ED",
+      "hash": "sha256:4e6c959142940f04",
+      "fetchedAt": "2026-04-16T05:44:39.997Z"
+    },
+    "hetzner": {
+      "version": "16",
+      "color": "D50C2D",
+      "hash": "sha256:d3a7dc7e55d0e900",
+      "fetchedAt": "2026-04-16T05:44:39.999Z"
     },
     "zsh": {
       "version": "16",
