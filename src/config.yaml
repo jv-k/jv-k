@@ -1,34 +1,108 @@
+# ============================================================================
+# CONFIGURATION FILE FOR jv-k README GENERATOR
+# ============================================================================
+# This file contains all configuration settings for the README generator.
+# It uses YAML format and supports multiple environments (default, dev, prod, etc.)
+#
+# USAGE:
+# - Default environment is used automatically
+# - Override with --env flag: bun run start --build --env production
+#
+# STRUCTURE:
+# Each environment section can override any of these settings
+# ============================================================================
+
 default:
-  datafile:
-    ./src/data/mystack.yml
-  tpl_section:
-    ./src/templates/section.pug
-  tpl_icon:
-    ./src/templates/icon.pug
-  tag_start:
-    <!-- START mystack -->
-  tag_end:
-    <!-- END mystack -->
-  file_input:
-    ./src/templates/readme.tpl.md
-  file_output:
-    ./build/readme.md
-  # Icon fetcher settings
-  icons_output_dir:
-    ./assets/icons
-  icons_manifest_path:
-    ./assets/icons/manifest.json
-  icons_cdn_base_url:
-    https://cdn.jsdelivr.net/npm/simple-icons
-  icons_package_api_url:
-    https://data.jsdelivr.net/v1/packages/npm/simple-icons
-  icons_fallback_cdn_url:
-    https://unpkg.com/simple-icons
-  icons_concurrency_limit:
-    10
-  icons_request_timeout:
-    10000
-  icons_max_retries:
-    3
-  icons_min_major_version:
-    1
+  # --------------------------------------------------------------------------
+  # README GENERATION SETTINGS
+  # --------------------------------------------------------------------------
+  # These settings control the core README generation process
+  
+  datafile: ./src/data/mystack.yml
+  # Path to YAML file containing skills/technologies data
+  # This file defines what icons to include and their properties
+  # Format: { Skillset: { 'Category': [{ name, color, url }, ...] } }
+  
+  tpl_section: ./src/templates/section.pug
+  # Path to Pug template for rendering a skill section/category
+  # Receives: { name: string, icons: string }
+  # Generates: <section><h6>Category</h6>icons...</section>
+  
+  tpl_icon: ./src/templates/icon.pug
+  # Path to Pug template for rendering individual skill icon
+  # Receives: { name: string, url: string, color: string }
+  # Generates: <a href="..."><img src="..." /></a>
+  
+  tag_start: <!-- START mystack -->
+  # HTML comment marking the START of the generated content section
+  # Everything between tag_start and tag_end will be replaced
+  # Can be customized to have multiple sections with different tags
+  
+  tag_end: <!-- END mystack -->
+  # HTML comment marking the END of the generated content section
+  # Works together with tag_start to define replacement boundaries
+  
+  file_input: ./src/templates/readme.tpl.md
+  # Path to the input README template file
+  # This is the base markdown file containing placeholder tags
+  # Content outside the tags is preserved in the output
+  
+  file_output: ./build/readme.md
+  # Path where the generated README will be written
+  # Parent directory must exist or will be created
+  # This is the final output that can be copied to your GitHub profile
+  
+  # --------------------------------------------------------------------------
+  # ICON FETCHER SETTINGS
+  # --------------------------------------------------------------------------
+  # These settings control the icon downloading and caching behavior
+  
+  icons_output_dir: ./assets/icons
+  # Directory where downloaded SVG icon files will be saved
+  # One SVG file per skill (named {slug}.svg)
+  # Icons are referenced in generated HTML as relative paths
+  
+  icons_manifest_path: ./assets/icons/manifest.json
+  # Path to the icon manifest JSON file
+  # Tracks metadata for each icon: { version, color, hash, fetchedAt }
+  # Used for caching to avoid re-downloading unchanged icons
+  # Format: { generatedAt, simpleIconsLatest, icons: { slug: {...} } }
+  
+  icons_cdn_base_url: https://cdn.jsdelivr.net/npm/simple-icons
+  # Primary CDN URL for fetching simple-icons SVG files
+  # jsDelivr provides fast, reliable CDN hosting for npm packages
+  # Icons are fetched as: {cdn_base_url}@{version}/icons/{slug}.svg
+  
+  icons_package_api_url: https://data.jsdelivr.net/v1/packages/npm/simple-icons
+  # API endpoint to discover available simple-icons versions
+  # Returns JSON with list of all published versions
+  # Used to implement version fallback (search older versions)
+  
+  icons_fallback_cdn_url: https://unpkg.com/simple-icons
+  # Fallback CDN URL if primary CDN fails
+  # unpkg is used as secondary source for redundancy
+  # Ensures build doesn't fail if jsDelivr is temporarily unavailable
+  
+  icons_concurrency_limit: 10
+  # Maximum number of concurrent icon download requests
+  # Limits parallelism to avoid overwhelming CDN or hitting rate limits
+  # Higher = faster but risks rate limiting, Lower = slower but safer
+  # Recommended: 5-20 depending on icon count and network
+  
+  icons_request_timeout: 10000
+  # HTTP request timeout in milliseconds (10 seconds)
+  # How long to wait for each icon download before timing out
+  # If CDN is slow, increase this value
+  # If build seems to hang, decrease to fail faster
+  
+  icons_max_retries: 3
+  # Maximum number of retry attempts for failed requests
+  # Each retry uses exponential backoff (2^attempt * 1000ms)
+  # Retry 1: 2s delay, Retry 2: 4s delay, Retry 3: 8s delay
+  # Helps handle temporary network issues or rate limiting
+  
+  icons_min_major_version: 1
+  # Minimum simple-icons major version to check during fallback
+  # Version fallback searches backward through major versions
+  # Set to 1 to check all versions (comprehensive but slower)
+  # Increase to skip very old versions (faster but less coverage)
