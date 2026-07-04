@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T16:55:16.594Z",
+  "generatedAt": "2026-07-04T17:26:00.069Z",
   "simpleIconsLatest": "unknown",
   "icons": {
     "typescript": {
@@ -374,6 +374,12 @@
       "hash": "sha256:68e27a7570b9e0f1",
       "fetchedAt": "2026-03-24T03:26:15.491Z"
     },
+    "traefikproxy": {
+      "version": "16",
+      "color": "24A1C1",
+      "hash": "sha256:f9b29330aad2d5c1",
+      "fetchedAt": "2026-07-04T16:55:16.754Z"
+    },
     "mongodb": {
       "version": "16",
       "color": "47A248",
@@ -445,6 +451,30 @@
       "color": "D50C2D",
       "hash": "sha256:d3a7dc7e55d0e900",
       "fetchedAt": "2026-04-16T05:44:39.999Z"
+    },
+    "grafana": {
+      "version": "16",
+      "color": "F46800",
+      "hash": "sha256:fd70ea7298d67665",
+      "fetchedAt": "2026-07-04T16:55:16.911Z"
+    },
+    "prometheus": {
+      "version": "16",
+      "color": "E6522C",
+      "hash": "sha256:aae7efa90a77c233",
+      "fetchedAt": "2026-07-04T16:55:16.895Z"
+    },
+    "sentry": {
+      "version": "16",
+      "color": "362D59",
+      "hash": "sha256:24ac56868a3b5dd4",
+      "fetchedAt": "2026-07-04T16:55:16.929Z"
+    },
+    "posthog": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:a1b127ae17a7451a",
+      "fetchedAt": "2026-07-04T16:55:16.959Z"
     },
     "zsh": {
       "version": "16",
@@ -673,36 +703,6 @@
       "color": "7C3AED",
       "hash": "sha256:ed662a9b6d1a5d99",
       "fetchedAt": "2026-03-24T03:26:15.821Z"
-    },
-    "traefikproxy": {
-      "version": "16",
-      "color": "24A1C1",
-      "hash": "sha256:f9b29330aad2d5c1",
-      "fetchedAt": "2026-07-04T16:55:16.754Z"
-    },
-    "prometheus": {
-      "version": "16",
-      "color": "E6522C",
-      "hash": "sha256:aae7efa90a77c233",
-      "fetchedAt": "2026-07-04T16:55:16.895Z"
-    },
-    "grafana": {
-      "version": "16",
-      "color": "F46800",
-      "hash": "sha256:fd70ea7298d67665",
-      "fetchedAt": "2026-07-04T16:55:16.911Z"
-    },
-    "sentry": {
-      "version": "16",
-      "color": "362D59",
-      "hash": "sha256:24ac56868a3b5dd4",
-      "fetchedAt": "2026-07-04T16:55:16.929Z"
-    },
-    "posthog": {
-      "version": "16",
-      "color": "333333",
-      "hash": "sha256:a1b127ae17a7451a",
-      "fetchedAt": "2026-07-04T16:55:16.959Z"
     }
   }
 }
