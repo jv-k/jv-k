@@ -193,6 +193,9 @@ Skillset:
     - name: githubactions
       color: '#2088FF'
       url: https://github.com/features/actions
+    - name: traefikproxy
+      color: '#24A1C1'
+      url: https://traefik.io/
   'DBs':
     - name: mongodb
       color: '#47A248'
@@ -231,6 +234,19 @@ Skillset:
     - name: hetzner
       color: '#D50C2D'
       url: https://www.hetzner.com/
+  'Observability':
+    - name: grafana
+      color: '#F46800'
+      url: https://grafana.com/
+    - name: prometheus
+      color: '#E6522C'
+      url: https://prometheus.io/
+    - name: sentry
+      color: '#362D59'
+      url: https://sentry.io/
+    - name: posthog
+      color: '#333'
+      url: https://posthog.com/
   'CLI':
     - name: zsh
       color: '#F15A24'
