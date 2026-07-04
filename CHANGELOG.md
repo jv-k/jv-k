@@ -1,3 +1,32 @@
+## 3.1.0 (July 04, 2026)
+- chore: updated package.json, updated CHANGELOG.md, bumped 3.0.0 -> 3.1.0
+- chore(deps): regenerate pnpm lockfile and allow bun postinstall builds
+- build: update icons and readme
+- feat: add Observability section and Traefik to DevOps
+- build: update icons and readme
+- feat: add Coolify and Hetzner to Cloud section
+- build: update icons and readme
+- fix(skills): set radixui and github icon colors to #333
+- build: update icons and readme
+- fix(skills): remove rust/ruby, fix black icon colors, fix MCP slug
+- build: update icons and readme
+- feat(skills): add 24 new skill icons and fix Gemini URL
+- fix(skills): fixed YAML issue
+- chore(skills): added fastapi
+- build: update icons and readme
+- merge: pull request #4 from jv-k/feat-icon-download
+- fix(ci/cd): put bun back as a dependency.
+- merge: branch 'refactor-improvements'
+
+## 3.0.0 (January 06, 2026)
+- chore: updated package.json, updated CHANGELOG.md, bumped 2.0.2 -> 3.0.0
+- docs: update ARCHITECTURE.md to reflect TypeScript migration
+- chore(data): update skillset with new technologies
+- fix(test): use bracket notation for index signature access
+- docs(lib): add README documenting library modules
+- chore(tpl): add space between icons
+- chore: add enhanced npm scripts for development workflow
+
 ## 2.0.2 (July 04, 2024)
 - chore: updated package.json, updated package-lock.json, created CHANGELOG.md, bumped 2.0.1 -> 2.0.2
 - docs: remove jobtitle
