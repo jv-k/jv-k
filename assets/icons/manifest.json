@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-16T05:45:02.400Z",
+  "generatedAt": "2026-07-04T16:55:16.594Z",
   "simpleIconsLatest": "unknown",
   "icons": {
     "typescript": {
@@ -673,6 +673,36 @@
       "color": "7C3AED",
       "hash": "sha256:ed662a9b6d1a5d99",
       "fetchedAt": "2026-03-24T03:26:15.821Z"
+    },
+    "traefikproxy": {
+      "version": "16",
+      "color": "24A1C1",
+      "hash": "sha256:f9b29330aad2d5c1",
+      "fetchedAt": "2026-07-04T16:55:16.754Z"
+    },
+    "prometheus": {
+      "version": "16",
+      "color": "E6522C",
+      "hash": "sha256:aae7efa90a77c233",
+      "fetchedAt": "2026-07-04T16:55:16.895Z"
+    },
+    "grafana": {
+      "version": "16",
+      "color": "F46800",
+      "hash": "sha256:fd70ea7298d67665",
+      "fetchedAt": "2026-07-04T16:55:16.911Z"
+    },
+    "sentry": {
+      "version": "16",
+      "color": "362D59",
+      "hash": "sha256:24ac56868a3b5dd4",
+      "fetchedAt": "2026-07-04T16:55:16.929Z"
+    },
+    "posthog": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:a1b127ae17a7451a",
+      "fetchedAt": "2026-07-04T16:55:16.959Z"
     }
   }
 }
