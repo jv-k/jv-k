@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T17:26:00.069Z",
+  "generatedAt": "2026-09-12T21:39:11.686Z",
   "simpleIconsLatest": "unknown",
   "icons": {
     "typescript": {
@@ -37,6 +37,12 @@
       "color": "00ADD8",
       "hash": "sha256:33e31a3d04968375",
       "fetchedAt": "2026-01-06T23:00:09.045Z"
+    },
+    "swift": {
+      "version": "16",
+      "color": "F05138",
+      "hash": "sha256:61012b73dabcfc02",
+      "fetchedAt": "2026-09-12T21:34:02.764Z"
     },
     "nodedotjs": {
       "version": "16",
@@ -452,6 +458,12 @@
       "hash": "sha256:d3a7dc7e55d0e900",
       "fetchedAt": "2026-04-16T05:44:39.999Z"
     },
+    "netcup": {
+      "version": "16",
+      "color": "056473",
+      "hash": "sha256:9fc4275ddfb19cc0",
+      "fetchedAt": "2026-09-12T21:34:02.763Z"
+    },
     "grafana": {
       "version": "16",
       "color": "F46800",
@@ -518,6 +530,12 @@
       "hash": "sha256:5119ef950a0d648b",
       "fetchedAt": "2026-01-06T23:00:10.284Z"
     },
+    "claudecode": {
+      "version": "16",
+      "color": "D97757",
+      "hash": "sha256:645bc8fb1b0bb4b5",
+      "fetchedAt": "2026-09-12T21:34:02.759Z"
+    },
     "jupyter": {
       "version": "16",
       "color": "F37626",
@@ -571,6 +589,12 @@
       "color": "412991",
       "hash": "sha256:7800930955052cd5",
       "fetchedAt": "2026-03-24T03:26:15.489Z"
+    },
+    "codex": {
+      "version": "custom",
+      "color": "333333",
+      "hash": "sha256:a7ec48a86dca5065",
+      "fetchedAt": "2026-09-12T21:39:11.699Z"
     },
     "google": {
       "version": "16",
