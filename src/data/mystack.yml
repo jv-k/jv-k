@@ -19,6 +19,9 @@ Skillset:
     - name: go
       color: '#00ADD8'
       url: https://golang.org/
+    - name: swift
+      color: '#F05138'
+      url: https://www.swift.org/
   'Backend':
     - name: nodedotjs
       color: '#339933'
@@ -234,6 +237,9 @@ Skillset:
     - name: hetzner
       color: '#D50C2D'
       url: https://www.hetzner.com/
+    - name: netcup
+      color: '#056473'
+      url: https://www.netcup.com/
   'Observability':
     - name: grafana
       color: '#F46800'
@@ -270,6 +276,9 @@ Skillset:
     - name: claude
       color: '#D97757'
       url: https://www.anthropic.com/
+    - name: claudecode
+      color: '#D97757'
+      url: https://code.claude.com/
     - name: jupyter
       color: '#F37626'
       url: https://jupyter.org/
@@ -297,6 +306,9 @@ Skillset:
     - name: openai
       color: '#412991'
       url: https://openai.com/
+    - name: codex
+      color: '#333'
+      url: https://openai.com/codex/
     - name: google
       color: '#4285F4'
       url: https://aistudio.google.com/
