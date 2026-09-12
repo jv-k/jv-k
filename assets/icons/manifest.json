@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T17:26:00.069Z",
+  "generatedAt": "2026-09-12T22:12:13.229Z",
   "simpleIconsLatest": "unknown",
   "icons": {
     "typescript": {
@@ -37,6 +37,12 @@
       "color": "00ADD8",
       "hash": "sha256:33e31a3d04968375",
       "fetchedAt": "2026-01-06T23:00:09.045Z"
+    },
+    "swift": {
+      "version": "16",
+      "color": "F05138",
+      "hash": "sha256:61012b73dabcfc02",
+      "fetchedAt": "2026-09-12T21:34:02.764Z"
     },
     "nodedotjs": {
       "version": "16",
@@ -452,6 +458,12 @@
       "hash": "sha256:d3a7dc7e55d0e900",
       "fetchedAt": "2026-04-16T05:44:39.999Z"
     },
+    "netcup": {
+      "version": "16",
+      "color": "056473",
+      "hash": "sha256:9fc4275ddfb19cc0",
+      "fetchedAt": "2026-09-12T21:34:02.763Z"
+    },
     "grafana": {
       "version": "16",
       "color": "F46800",
@@ -494,11 +506,17 @@
       "hash": "sha256:836fd3c75caec593",
       "fetchedAt": "2026-03-24T03:26:15.500Z"
     },
-    "langchain": {
+    "claude": {
       "version": "16",
-      "color": "1C3C3C",
-      "hash": "sha256:2219b624ff05de53",
-      "fetchedAt": "2026-01-06T23:00:10.217Z"
+      "color": "D97757",
+      "hash": "sha256:5119ef950a0d648b",
+      "fetchedAt": "2026-01-06T23:00:10.284Z"
+    },
+    "openai": {
+      "version": "15",
+      "color": "412991",
+      "hash": "sha256:7800930955052cd5",
+      "fetchedAt": "2026-03-24T03:26:15.489Z"
     },
     "googlegemini": {
       "version": "16",
@@ -506,17 +524,83 @@
       "hash": "sha256:404eba6940a54e63",
       "fetchedAt": "2026-01-06T23:00:10.405Z"
     },
+    "qwen": {
+      "version": "16",
+      "color": "6950EF",
+      "hash": "sha256:189f77fb476f0a39",
+      "fetchedAt": "2026-09-12T21:53:13.789Z"
+    },
+    "kimi": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:4ff8912c975f5d61",
+      "fetchedAt": "2026-09-12T21:53:13.792Z"
+    },
+    "claudecode": {
+      "version": "16",
+      "color": "D97757",
+      "hash": "sha256:645bc8fb1b0bb4b5",
+      "fetchedAt": "2026-09-12T21:34:02.759Z"
+    },
+    "codex": {
+      "version": "custom",
+      "color": "412991",
+      "hash": "sha256:502ca466ac590033",
+      "fetchedAt": "2026-09-12T22:12:13.241Z"
+    },
+    "pi": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:8a2b86523a7a98b5",
+      "fetchedAt": "2026-09-12T21:53:13.788Z"
+    },
+    "hermesagent": {
+      "version": "custom",
+      "color": "0000F2",
+      "hash": "sha256:f8a4eb3b9960b0fb",
+      "fetchedAt": "2026-09-12T22:12:13.241Z"
+    },
+    "kilocode": {
+      "version": "custom",
+      "color": "FACC15",
+      "hash": "sha256:5c37fd5feb6b84b5",
+      "fetchedAt": "2026-09-12T22:12:13.241Z"
+    },
+    "langchain": {
+      "version": "16",
+      "color": "1C3C3C",
+      "hash": "sha256:2219b624ff05de53",
+      "fetchedAt": "2026-01-06T23:00:10.217Z"
+    },
+    "modelcontextprotocol": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:b6ed0efd01b6682e",
+      "fetchedAt": "2026-03-24T04:01:42.492Z"
+    },
     "huggingface": {
       "version": "16",
       "color": "FFD21E",
       "hash": "sha256:c167703fa2fb404f",
       "fetchedAt": "2026-01-06T23:00:10.412Z"
     },
-    "claude": {
+    "n8n": {
       "version": "16",
-      "color": "D97757",
-      "hash": "sha256:5119ef950a0d648b",
-      "fetchedAt": "2026-01-06T23:00:10.284Z"
+      "color": "EA4B71",
+      "hash": "sha256:2a415d5d2dea1903",
+      "fetchedAt": "2026-01-06T23:00:10.563Z"
+    },
+    "google": {
+      "version": "16",
+      "color": "4285F4",
+      "hash": "sha256:147b64b183daad84",
+      "fetchedAt": "2026-03-24T03:49:32.203Z"
+    },
+    "azuredevops": {
+      "version": "12",
+      "color": "0078D7",
+      "hash": "sha256:9b5de92222cccde9",
+      "fetchedAt": "2026-03-24T03:26:15.952Z"
     },
     "jupyter": {
       "version": "16",
@@ -553,36 +637,6 @@
       "color": "44A833",
       "hash": "sha256:2d424ddab21e4e87",
       "fetchedAt": "2026-01-06T23:00:10.440Z"
-    },
-    "n8n": {
-      "version": "16",
-      "color": "EA4B71",
-      "hash": "sha256:2a415d5d2dea1903",
-      "fetchedAt": "2026-01-06T23:00:10.563Z"
-    },
-    "modelcontextprotocol": {
-      "version": "16",
-      "color": "333333",
-      "hash": "sha256:b6ed0efd01b6682e",
-      "fetchedAt": "2026-03-24T04:01:42.492Z"
-    },
-    "openai": {
-      "version": "15",
-      "color": "412991",
-      "hash": "sha256:7800930955052cd5",
-      "fetchedAt": "2026-03-24T03:26:15.489Z"
-    },
-    "google": {
-      "version": "16",
-      "color": "4285F4",
-      "hash": "sha256:147b64b183daad84",
-      "fetchedAt": "2026-03-24T03:49:32.203Z"
-    },
-    "azuredevops": {
-      "version": "12",
-      "color": "0078D7",
-      "hash": "sha256:9b5de92222cccde9",
-      "fetchedAt": "2026-03-24T03:26:15.952Z"
     },
     "adobephotoshop": {
       "version": "13",

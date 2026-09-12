@@ -39,6 +39,9 @@ const service = new IconFetcherService({
 // Get available versions
 const versions = await service.getAvailableMajorVersions();
 
+// Local override for icons simple-icons lacks (null if <customDir>/<slug>.svg is absent)
+const custom = service.loadCustomIcon('codex', '#333', customDir);
+
 // Fetch single icon with fallback
 const result = await service.fetchIconWithFallback('javascript', '#F7DF1E', versions);
 
@@ -51,6 +54,7 @@ const results = await service.fetchIcons(requirements, versions, (r) => {
 **Features:**
 
 - Version fallback search (newest → oldest)
+- Local SVG overrides (`assets/icons-custom/<slug>.svg`)
 - HEAD request optimization
 - Fallback CDN support
 - Placeholder SVG generation
@@ -70,7 +74,7 @@ const progress = createProgressReporter({ total: 100 });
 
 for (const item of items) {
   await processItem(item);
-  progress.tick('fetched'); // or 'cached', 'fallback', 'failed'
+  progress.tick('fetched'); // or 'cached', 'fallback', 'custom', 'failed'
 }
 
 progress.done();
@@ -82,6 +86,7 @@ console.log(progress.getCounts()); // { fetched: 80, cached: 15, ... }
 - `+` = newly fetched from latest version
 - `.` = cached (reused existing)
 - `v` = fetched from older version (fallback)
+- `*` = custom (local override SVG)
 - `x` = failed (placeholder created)
 
 **Options:**

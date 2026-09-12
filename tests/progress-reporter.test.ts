@@ -30,6 +30,20 @@ describe('ProgressReporter', () => {
       expect(output).toContain('x');
     });
 
+    test('should write "*" for custom (local override) status and count it', () => {
+      const output: string[] = [];
+      const progress = createProgressReporter({
+        total: 1,
+        lineWidth: 100,
+        write: (text) => output.push(text),
+      });
+
+      progress.tick('custom');
+
+      expect(output).toContain('*');
+      expect(progress.getCounts().custom).toBe(1);
+    });
+
     test('should wrap at lineWidth intervals', () => {
       const output: string[] = [];
       const progress = createProgressReporter({

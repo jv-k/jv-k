@@ -3,7 +3,10 @@
  * @author John Valai <git@jvk.to>
  */
 
-import { describe, test, expect, mock, beforeEach } from 'bun:test';
+import { describe, test, expect, mock, beforeEach, afterEach } from 'bun:test';
+import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { IconFetcherService } from '../src/lib/icon-fetcher.service.js';
 import { createLogger } from '../src/lib/logger.js';
 import type { SkillSetConfig } from '../src/schemas/index.js';
@@ -21,6 +24,7 @@ const mockConfig: SkillSetConfig = {
   file_input: './input.md',
   file_output: './output.md',
   icons_output_dir: './assets/icons',
+  icons_custom_dir: './assets/icons-custom',
   icons_manifest_path: './assets/icons/manifest.json',
   icons_cdn_base_url: 'https://cdn.example.com/simple-icons',
   icons_package_api_url: 'https://api.example.com/packages/simple-icons',
@@ -312,6 +316,50 @@ describe('IconFetcherService', () => {
 
       expect(progressCalls).toContain('icon1');
       expect(progressCalls).toContain('icon2');
+    });
+  });
+  // ==========================================================================
+  // Custom Icon Overrides
+  // ==========================================================================
+
+  describe('loadCustomIcon', () => {
+    let customDir: string;
+
+    beforeEach(() => {
+      customDir = mkdtempSync(join(tmpdir(), 'icons-custom-'));
+    });
+
+    afterEach(() => {
+      rmSync(customDir, { recursive: true, force: true });
+    });
+
+    test('should return null when no custom SVG exists for the slug', () => {
+      expect(service.loadCustomIcon('missing', '#FF0000', customDir)).toBeNull();
+    });
+
+    test('should return the custom SVG with color applied and version "custom"', () => {
+      writeFileSync(join(customDir, 'codex.svg'), mockSvg);
+
+      const result = service.loadCustomIcon('codex', '#412991', customDir);
+
+      expect(result).not.toBeNull();
+      expect(result?.slug).toBe('codex');
+      expect(result?.version).toBe('custom');
+      expect(result?.success).toBe(true);
+      expect(result?.svg).toContain('fill="#412991"');
+      expect(result?.svg).toContain('<path d="M12 0L24 12 12 24 0 12z"/>');
+    });
+
+    test('should replace an existing root fill (e.g. currentColor) on the custom SVG', () => {
+      writeFileSync(
+        join(customDir, 'codex.svg'),
+        '<svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z"/></svg>'
+      );
+
+      const result = service.loadCustomIcon('codex', '#412991', customDir);
+
+      expect(result?.svg).toContain('fill="#412991"');
+      expect(result?.svg).not.toContain('currentColor');
     });
   });
 });

@@ -19,6 +19,9 @@ Skillset:
     - name: go
       color: '#00ADD8'
       url: https://golang.org/
+    - name: swift
+      color: '#F05138'
+      url: https://www.swift.org/
   'Backend':
     - name: nodedotjs
       color: '#339933'
@@ -234,6 +237,9 @@ Skillset:
     - name: hetzner
       color: '#D50C2D'
       url: https://www.hetzner.com/
+    - name: netcup
+      color: '#056473'
+      url: https://www.netcup.com/
   'Observability':
     - name: grafana
       color: '#F46800'
@@ -257,19 +263,58 @@ Skillset:
     - name: homebrew
       color: '#FBB040'
       url: https://brew.sh/
-  'AI / ML':
-    - name: langchain
-      color: '#1C3C3C'
-      url: https://langchain.com/
-    - name: googlegemini
-      color: '#8E75B2'
-      url: https://gemini.google.com/
-    - name: huggingface
-      color: '#FFD21E'
-      url: https://huggingface.co/
+  'AI Models':
     - name: claude
       color: '#D97757'
       url: https://www.anthropic.com/
+    - name: openai
+      color: '#412991'
+      url: https://openai.com/
+    - name: googlegemini
+      color: '#8E75B2'
+      url: https://gemini.google.com/
+    - name: qwen
+      color: '#6950EF'
+      url: https://qwen.ai/
+    - name: kimi
+      color: '#333'
+      url: https://www.kimi.com/
+  'Coding Agents':
+    - name: claudecode
+      color: '#D97757'
+      url: https://code.claude.com/
+    - name: codex
+      color: '#412991'
+      url: https://openai.com/codex/
+    - name: pi
+      color: '#333'
+      url: https://pi.dev/
+    - name: hermesagent
+      color: '#0000F2'
+      url: https://hermes-agent.nousresearch.com/
+    - name: kilocode
+      color: '#FACC15'
+      url: https://kilocode.ai/
+  'AI Tooling':
+    - name: langchain
+      color: '#1C3C3C'
+      url: https://langchain.com/
+    - name: modelcontextprotocol
+      color: '#333'
+      url: https://modelcontextprotocol.io/
+    - name: huggingface
+      color: '#FFD21E'
+      url: https://huggingface.co/
+    - name: n8n
+      color: '#EA4B71'
+      url: https://n8n.io/
+    - name: google
+      color: '#4285F4'
+      url: https://aistudio.google.com/
+    - name: azuredevops
+      color: '#0078D7'
+      url: https://ai.azure.com/
+  'ML / Data Science':
     - name: jupyter
       color: '#F37626'
       url: https://jupyter.org/
@@ -288,21 +333,6 @@ Skillset:
     - name: anaconda
       color: '#44A833'
       url: https://www.anaconda.com/
-    - name: n8n
-      color: '#EA4B71'
-      url: https://n8n.io/
-    - name: modelcontextprotocol
-      color: '#333'
-      url: https://modelcontextprotocol.io/
-    - name: openai
-      color: '#412991'
-      url: https://openai.com/
-    - name: google
-      color: '#4285F4'
-      url: https://aistudio.google.com/
-    - name: azuredevops
-      color: '#0078D7'
-      url: https://ai.azure.com/
   Graphics:
     - name: adobephotoshop
       color: '#31A8FF'

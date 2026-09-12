@@ -3,8 +3,9 @@
  * @fileoverview Build-time icon fetcher with version-fallback search
  *
  * This script fetches icons from simple-icons, searching backwards through
- * major versions if an icon has been removed from newer releases. It applies
- * custom colors and saves SVGs locally for resilient, CDN-independent builds.
+ * major versions if an icon has been removed from newer releases. Icons that
+ * simple-icons lacks can be supplied as local SVG overrides. It applies custom
+ * colors and saves SVGs locally for resilient, CDN-independent builds.
  *
  * @author John Valai <git@jvk.to>
  */
@@ -91,6 +92,7 @@ const sharedConfig = configLoad<SkillSetConfig>(join(PROJECT_ROOT, 'src/config.y
 // Resolved paths (relative paths from config resolved against project root)
 const dataFilePath = join(PROJECT_ROOT, sharedConfig.datafile);
 const outputDirPath = join(PROJECT_ROOT, sharedConfig.icons_output_dir);
+const customDirPath = join(PROJECT_ROOT, sharedConfig.icons_custom_dir);
 const manifestFilePath = join(PROJECT_ROOT, sharedConfig.icons_manifest_path);
 
 // ============================================================================
@@ -231,6 +233,25 @@ async function main(): Promise<void> {
   await service.mapWithConcurrency(
     requirements,
     async (req): Promise<void> => {
+      // Local override wins over both the cache and simple-icons
+      const custom = service.loadCustomIcon(req.slug, req.color, customDirPath);
+      if (custom) {
+        if (!options.dryRun) {
+          writeFileSync(join(outputDirPath, `${custom.slug}.svg`), custom.svg);
+        }
+
+        newManifest.icons[custom.slug] = {
+          version: custom.version,
+          color: service.normalizeColor(req.color),
+          hash: service.hashContent(custom.svg),
+          fetchedAt: new Date().toISOString(),
+        };
+
+        results.push(custom);
+        progress.tick('custom');
+        return;
+      }
+
       const existing = existingManifest?.icons[req.slug];
 
       // Check if we can use cached version
@@ -309,12 +330,16 @@ async function main(): Promise<void> {
       fetched: counts.fetched,
       fallback: counts.fallback,
       cached: counts.cached,
+      custom: counts.custom,
       failed: counts.failed,
       elapsed: `${elapsed}s`,
     },
     'Summary'
   );
-  logger.info({ output: outputDirPath, manifest: manifestFilePath }, 'Paths');
+  logger.info(
+    { output: outputDirPath, custom: customDirPath, manifest: manifestFilePath },
+    'Paths'
+  );
 
   // Report fallback details
   const fallbackIcons = results.filter((r) => r.success && parseInt(r.version, 10) < latestMajor);

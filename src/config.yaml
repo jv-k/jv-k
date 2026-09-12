@@ -16,6 +16,9 @@ default:
   # Icon fetcher settings
   icons_output_dir:
     ./assets/icons
+  # Local SVG overrides for icons simple-icons lacks (<slug>.svg, takes precedence)
+  icons_custom_dir:
+    ./assets/icons-custom
   icons_manifest_path:
     ./assets/icons/manifest.json
   icons_cdn_base_url:

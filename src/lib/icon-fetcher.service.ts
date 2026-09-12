@@ -9,6 +9,8 @@
  * @author John Valai <git@jvk.to>
  */
 
+import { existsSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import type { Logger } from 'pino';
 import type {
   IconFetchResult,
@@ -223,6 +225,31 @@ export class IconFetcherService {
     } catch {
       return 'unknown';
     }
+  }
+
+  // ==========================================================================
+  // Custom Icon Overrides
+  // ==========================================================================
+
+  /**
+   * Load a locally-maintained SVG for icons simple-icons lacks.
+   * Looks for `<customDir>/<slug>.svg`; returns null when there is no override.
+   */
+  loadCustomIcon(slug: string, color: string, customDir: string): IconFetchResult | null {
+    const iconPath = join(customDir, `${slug}.svg`);
+
+    if (!existsSync(iconPath)) {
+      return null;
+    }
+
+    const svg = readFileSync(iconPath, 'utf-8');
+
+    return {
+      slug,
+      svg: this.applyColorToSvg(svg, color),
+      version: 'custom',
+      success: true,
+    };
   }
 
   // ==========================================================================
