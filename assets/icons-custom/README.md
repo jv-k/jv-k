@@ -9,3 +9,5 @@ single `<path>`, no hard-coded fill.
 | Slug    | Source                                                                            | Licence |
 | ------- | --------------------------------------------------------------------------------- | ------- |
 | `codex` | [@lobehub/icons-static-svg](https://www.npmjs.com/package/@lobehub/icons-static-svg) | MIT     |
+| `hermesagent` | [@lobehub/icons-static-svg](https://www.npmjs.com/package/@lobehub/icons-static-svg) (`nousresearch` — the nous-girl mark Hermes Agent ships as its brand badge; simple-icons' `hermes` is the parcel courier) | MIT |
+| `kilocode` | [@lobehub/icons-static-svg](https://www.npmjs.com/package/@lobehub/icons-static-svg) | MIT |
