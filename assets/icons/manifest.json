@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T21:53:13.552Z",
+  "generatedAt": "2026-09-12T22:12:13.229Z",
   "simpleIconsLatest": "unknown",
   "icons": {
     "typescript": {
@@ -524,6 +524,18 @@
       "hash": "sha256:404eba6940a54e63",
       "fetchedAt": "2026-01-06T23:00:10.405Z"
     },
+    "qwen": {
+      "version": "16",
+      "color": "6950EF",
+      "hash": "sha256:189f77fb476f0a39",
+      "fetchedAt": "2026-09-12T21:53:13.789Z"
+    },
+    "kimi": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:4ff8912c975f5d61",
+      "fetchedAt": "2026-09-12T21:53:13.792Z"
+    },
     "claudecode": {
       "version": "16",
       "color": "D97757",
@@ -532,21 +544,27 @@
     },
     "codex": {
       "version": "custom",
+      "color": "412991",
+      "hash": "sha256:502ca466ac590033",
+      "fetchedAt": "2026-09-12T22:12:13.241Z"
+    },
+    "pi": {
+      "version": "16",
       "color": "333333",
-      "hash": "sha256:a7ec48a86dca5065",
-      "fetchedAt": "2026-09-12T21:53:13.567Z"
+      "hash": "sha256:8a2b86523a7a98b5",
+      "fetchedAt": "2026-09-12T21:53:13.788Z"
     },
     "hermesagent": {
       "version": "custom",
-      "color": "333333",
-      "hash": "sha256:f193ea286a79425b",
-      "fetchedAt": "2026-09-12T21:53:13.569Z"
+      "color": "0000F2",
+      "hash": "sha256:f8a4eb3b9960b0fb",
+      "fetchedAt": "2026-09-12T22:12:13.241Z"
     },
     "kilocode": {
       "version": "custom",
-      "color": "333333",
-      "hash": "sha256:ad73d5a232679676",
-      "fetchedAt": "2026-09-12T21:53:13.569Z"
+      "color": "FACC15",
+      "hash": "sha256:5c37fd5feb6b84b5",
+      "fetchedAt": "2026-09-12T22:12:13.241Z"
     },
     "langchain": {
       "version": "16",
@@ -739,24 +757,6 @@
       "color": "7C3AED",
       "hash": "sha256:ed662a9b6d1a5d99",
       "fetchedAt": "2026-03-24T03:26:15.821Z"
-    },
-    "pi": {
-      "version": "16",
-      "color": "333333",
-      "hash": "sha256:8a2b86523a7a98b5",
-      "fetchedAt": "2026-09-12T21:53:13.788Z"
-    },
-    "qwen": {
-      "version": "16",
-      "color": "6950EF",
-      "hash": "sha256:189f77fb476f0a39",
-      "fetchedAt": "2026-09-12T21:53:13.789Z"
-    },
-    "kimi": {
-      "version": "16",
-      "color": "333333",
-      "hash": "sha256:4ff8912c975f5d61",
-      "fetchedAt": "2026-09-12T21:53:13.792Z"
     }
   }
 }
