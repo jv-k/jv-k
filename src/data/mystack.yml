@@ -284,16 +284,16 @@ Skillset:
       color: '#D97757'
       url: https://code.claude.com/
     - name: codex
-      color: '#333'
+      color: '#412991'
       url: https://openai.com/codex/
     - name: pi
       color: '#333'
       url: https://pi.dev/
     - name: hermesagent
-      color: '#333'
+      color: '#0000F2'
       url: https://hermes-agent.nousresearch.com/
     - name: kilocode
-      color: '#333'
+      color: '#FACC15'
       url: https://kilocode.ai/
   'AI Tooling':
     - name: langchain
