@@ -243,6 +243,7 @@ describe('SkillSetConfigSchema', () => {
     file_output: './output.md',
     // Icon fetcher settings
     icons_output_dir: './assets/icons',
+    icons_custom_dir: './assets/icons-custom',
     icons_manifest_path: './assets/icons/manifest.json',
     icons_cdn_base_url: 'https://cdn.jsdelivr.net/npm/simple-icons',
     icons_package_api_url: 'https://data.jsdelivr.net/v1/packages/npm/simple-icons',
@@ -263,6 +264,11 @@ describe('SkillSetConfigSchema', () => {
       datafile: '',
     };
     expect(() => SkillSetConfigSchema.parse(invalidConfig)).toThrow();
+  });
+
+  test('should require icons_custom_dir', () => {
+    const { icons_custom_dir: _omitted, ...withoutCustomDir } = validConfig;
+    expect(() => SkillSetConfigSchema.parse(withoutCustomDir)).toThrow();
   });
 
   test('should reject invalid URL for CDN settings', () => {

@@ -11,7 +11,7 @@
 // Types
 // ============================================================================
 
-export type ProgressStatus = 'fetched' | 'cached' | 'fallback' | 'failed';
+export type ProgressStatus = 'fetched' | 'cached' | 'fallback' | 'custom' | 'failed';
 
 export interface ProgressReporter {
   /** Report a single item completion */
@@ -26,6 +26,7 @@ export interface ProgressCounts {
   fetched: number;
   cached: number;
   fallback: number;
+  custom: number;
   failed: number;
   total: number;
 }
@@ -49,6 +50,7 @@ const STATUS_SYMBOLS: Record<ProgressStatus, string> = {
   fetched: '+',
   cached: '.',
   fallback: 'v',
+  custom: '*',
   failed: 'x',
 };
 
@@ -63,6 +65,7 @@ const STATUS_SYMBOLS: Record<ProgressStatus, string> = {
  * - '+' = newly fetched from latest version
  * - '.' = cached (reused existing)
  * - 'v' = fetched from older version (fallback)
+ * - '*' = custom (local override SVG)
  * - 'x' = failed (placeholder created)
  *
  * @example
@@ -83,6 +86,7 @@ export function createProgressReporter(options: ProgressReporterOptions): Progre
     fetched: 0,
     cached: 0,
     fallback: 0,
+    custom: 0,
     failed: 0,
     total,
   };

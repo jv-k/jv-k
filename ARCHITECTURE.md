@@ -20,6 +20,7 @@ The project reads skill/technology data from a YAML file and generates HTML icon
 | `src/schemas/index.ts` | Zod schemas for runtime validation of YAML and config |
 | `src/types/index.ts` | TypeScript type definitions |
 | `src/data/mystack.yml` | YAML data file containing skills/technologies |
+| `assets/icons-custom/` | Local SVG overrides for icons simple-icons lacks (`<slug>.svg`) |
 | `src/config.yaml` | Configuration settings |
 | `src/templates/readme.tpl.md` | README template with placeholder tags |
 | `src/templates/icon.pug` | Pug template for individual skill icons |
@@ -27,7 +28,7 @@ The project reads skill/technology data from a YAML file and generates HTML icon
 
 ## How It Works
 
-1. **Fetch icons** (prebuild) - Downloads SVGs from simple-icons with version fallback
+1. **Fetch icons** (prebuild) - Downloads SVGs from simple-icons with version fallback; a `<slug>.svg` in `assets/icons-custom/` takes precedence and is copied instead
 2. **Load config** from `src/config.yaml`
 3. **Parse & validate YAML** skillset data via Zod schemas
 4. **Render HTML** icons using Pug templates via `renderSkillsHtml()`

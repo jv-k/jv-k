@@ -184,6 +184,7 @@ export const SkillSetConfigSchema = z.object({
   file_output: z.string().min(1),
   // Icon fetcher settings
   icons_output_dir: z.string().min(1),
+  icons_custom_dir: z.string().min(1),
   icons_manifest_path: z.string().min(1),
   icons_cdn_base_url: z.string().url(),
   icons_package_api_url: z.string().url(),
