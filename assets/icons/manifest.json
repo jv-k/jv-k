@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T22:12:13.229Z",
+  "generatedAt": "2026-09-12T22:18:06.864Z",
   "simpleIconsLatest": "unknown",
   "icons": {
     "typescript": {
@@ -546,7 +546,7 @@
       "version": "custom",
       "color": "412991",
       "hash": "sha256:502ca466ac590033",
-      "fetchedAt": "2026-09-12T22:12:13.241Z"
+      "fetchedAt": "2026-09-12T22:18:06.867Z"
     },
     "pi": {
       "version": "16",
@@ -558,13 +558,13 @@
       "version": "custom",
       "color": "0000F2",
       "hash": "sha256:f8a4eb3b9960b0fb",
-      "fetchedAt": "2026-09-12T22:12:13.241Z"
+      "fetchedAt": "2026-09-12T22:18:06.867Z"
     },
     "kilocode": {
       "version": "custom",
       "color": "FACC15",
       "hash": "sha256:5c37fd5feb6b84b5",
-      "fetchedAt": "2026-09-12T22:12:13.241Z"
+      "fetchedAt": "2026-09-12T22:18:06.868Z"
     },
     "langchain": {
       "version": "16",
