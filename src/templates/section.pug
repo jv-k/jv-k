@@ -1,4 +1,10 @@
-section
-  h6=name
-  !=icons
+a(href=liveUrl)
+  picture
+    source(media="(prefers-color-scheme: dark)" srcset=`${cardsBase}/${slug}-dark.svg`)
+    img(
+      src=`${cardsBase}/${slug}-light.svg`
+      width=width
+      alt=alt
+      title=tooltip
+    )
 | 

@@ -1,8 +1,8 @@
 <p align="center">
-  <a href="https://jvk.to"><img src="./assets/img/jvk-logo.svg" alt="jv-k logo" width="120"></a>
+  <a href="https://jvk.to"><img src="./assets/img/jvk-glitch.gif" alt="jv-k logo and the name John Valai, with the glitch effect from jvk.to" width="300"></a>
 </p>
 
-# 👋🏻 Hi
+# 👋🏻 Hi there!
 
 <!--
   Icons from:

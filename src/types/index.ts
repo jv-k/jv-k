@@ -11,8 +11,20 @@ export interface SkillSetConfig {
   datafile: string;
   /** Path to section Pug template */
   tpl_section: string;
-  /** Path to icon Pug template */
-  tpl_icon: string;
+  /** Directory holding the fetched icon SVGs */
+  icons_output_dir: string;
+  /** Directory the generated cards and page headings are written to */
+  generated_output_dir: string;
+  /** Font file (TTF, OTF or WOFF) for card titles and page headings */
+  font: string;
+  /** Public base URL of the generated cards, where each live card is opened from */
+  cards_live_url: string;
+  /** Card title size in px */
+  cards_title_size?: number;
+  /** Card title letter case */
+  cards_title_case?: 'as-is' | 'upper' | 'lower';
+  /** Page heading letter case */
+  headings_case?: 'as-is' | 'upper' | 'lower';
   /** Start placeholder tag in README template */
   tag_start: string;
   /** End placeholder tag in README template */
@@ -66,25 +78,23 @@ export interface CliOptions {
 }
 
 /**
- * Data passed to icon Pug template
- */
-export interface IconTemplateData {
-  /** Skill name */
-  name: string;
-  /** Skill URL */
-  url: string;
-  /** Skill color (without #) */
-  color: string;
-}
-
-/**
  * Data passed to section Pug template
  */
 export interface SectionTemplateData {
   /** Section/category name */
   name: string;
-  /** HTML string of all icons in this section */
-  icons: string;
+  /** Card file name stem (cards are `<slug>-light.svg` and `<slug>-dark.svg`) */
+  slug: string;
+  /** README path of the cards directory, e.g. `./assets/generated/cards` */
+  cardsBase: string;
+  /** Card width in px (height follows the SVG's aspect ratio, so cards scale down evenly) */
+  width: number;
+  /** Alt text naming the category and its skills, comma-separated */
+  alt: string;
+  /** Hover tooltip naming the category and its skills, bullet-separated */
+  tooltip: string;
+  /** Where the card links: its live copy, with per-icon hover and links */
+  liveUrl: string;
 }
 
 /**

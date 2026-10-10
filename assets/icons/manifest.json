@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T22:18:06.864Z",
+  "generatedAt": "2026-10-10T21:39:39.494Z",
   "simpleIconsLatest": "unknown",
   "icons": {
     "typescript": {
@@ -164,6 +164,12 @@
       "hash": "sha256:a661501b36c4a894",
       "fetchedAt": "2026-03-24T03:26:15.698Z"
     },
+    "inngest": {
+      "version": "custom",
+      "color": "333333",
+      "hash": "sha256:95d3c3818f54e537",
+      "fetchedAt": "2026-10-10T21:39:39.499Z"
+    },
     "react": {
       "version": "16",
       "color": "61DAFB",
@@ -206,6 +212,12 @@
       "hash": "sha256:36f68bb7d26278c3",
       "fetchedAt": "2026-03-24T04:01:42.395Z"
     },
+    "obra": {
+      "version": "custom",
+      "color": "333333",
+      "hash": "sha256:eeff3c1ab4c1ecd9",
+      "fetchedAt": "2026-10-10T21:39:39.500Z"
+    },
     "gatsby": {
       "version": "16",
       "color": "663399",
@@ -247,6 +259,18 @@
       "color": "333333",
       "hash": "sha256:6d905cc74ccda512",
       "fetchedAt": "2026-03-24T04:42:44.040Z"
+    },
+    "astro": {
+      "version": "16",
+      "color": "BC52EE",
+      "hash": "sha256:38502102492c2b4a",
+      "fetchedAt": "2026-10-10T21:37:11.288Z"
+    },
+    "heroui": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:2db38352c1fbde67",
+      "fetchedAt": "2026-10-10T21:37:11.466Z"
     },
     "electron": {
       "version": "16",
@@ -314,6 +338,12 @@
       "hash": "sha256:57456de82d7b876c",
       "fetchedAt": "2026-03-24T03:26:15.341Z"
     },
+    "biome": {
+      "version": "16",
+      "color": "60A5FA",
+      "hash": "sha256:296ffa3dadf6ba4c",
+      "fetchedAt": "2026-10-10T21:37:12.029Z"
+    },
     "graphql": {
       "version": "16",
       "color": "E10098",
@@ -337,6 +367,12 @@
       "color": "2596BE",
       "hash": "sha256:465a569b666f4605",
       "fetchedAt": "2026-01-06T23:00:09.972Z"
+    },
+    "stripe": {
+      "version": "16",
+      "color": "635BFF",
+      "hash": "sha256:7576775bf9915b69",
+      "fetchedAt": "2026-10-10T21:37:11.287Z"
     },
     "gnubash": {
       "version": "16",
@@ -409,6 +445,18 @@
       "color": "3FCF8E",
       "hash": "sha256:75f9566421d97d4f",
       "fetchedAt": "2026-03-24T03:26:15.689Z"
+    },
+    "neon": {
+      "version": "16",
+      "color": "34D59A",
+      "hash": "sha256:cdebbfa1fbfe4831",
+      "fetchedAt": "2026-10-10T21:37:12.254Z"
+    },
+    "drizzle": {
+      "version": "16",
+      "color": "C5F74F",
+      "hash": "sha256:8d1989d70a03b2b5",
+      "fetchedAt": "2026-10-10T21:37:11.881Z"
     },
     "microsoftazure": {
       "version": "12",
@@ -488,6 +536,12 @@
       "hash": "sha256:a1b127ae17a7451a",
       "fetchedAt": "2026-07-04T16:55:16.959Z"
     },
+    "langfuse": {
+      "version": "custom",
+      "color": "FF5D5F",
+      "hash": "sha256:2ed7f0b0b70c23ff",
+      "fetchedAt": "2026-10-10T21:39:39.501Z"
+    },
     "zsh": {
       "version": "16",
       "color": "F15A24",
@@ -505,6 +559,12 @@
       "color": "FBB040",
       "hash": "sha256:836fd3c75caec593",
       "fetchedAt": "2026-03-24T03:26:15.500Z"
+    },
+    "iterm2": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:6d15335c6bc4e435",
+      "fetchedAt": "2026-10-10T21:37:11.347Z"
     },
     "claude": {
       "version": "16",
@@ -546,7 +606,7 @@
       "version": "custom",
       "color": "412991",
       "hash": "sha256:502ca466ac590033",
-      "fetchedAt": "2026-09-12T22:18:06.867Z"
+      "fetchedAt": "2026-10-10T21:39:39.501Z"
     },
     "pi": {
       "version": "16",
@@ -558,13 +618,13 @@
       "version": "custom",
       "color": "0000F2",
       "hash": "sha256:f8a4eb3b9960b0fb",
-      "fetchedAt": "2026-09-12T22:18:06.867Z"
+      "fetchedAt": "2026-10-10T21:39:39.502Z"
     },
     "kilocode": {
       "version": "custom",
       "color": "FACC15",
       "hash": "sha256:5c37fd5feb6b84b5",
-      "fetchedAt": "2026-09-12T22:18:06.868Z"
+      "fetchedAt": "2026-10-10T21:39:39.502Z"
     },
     "langchain": {
       "version": "16",
@@ -601,6 +661,12 @@
       "color": "0078D7",
       "hash": "sha256:9b5de92222cccde9",
       "fetchedAt": "2026-03-24T03:26:15.952Z"
+    },
+    "aisdk": {
+      "version": "custom",
+      "color": "333333",
+      "hash": "sha256:8aec4a4e56d0fb23",
+      "fetchedAt": "2026-10-10T21:39:39.503Z"
     },
     "jupyter": {
       "version": "16",
@@ -680,6 +746,12 @@
       "hash": "sha256:80d735858f7e1a98",
       "fetchedAt": "2026-03-24T04:01:41.890Z"
     },
+    "rive": {
+      "version": "16",
+      "color": "333333",
+      "hash": "sha256:3b9e6cb87a1c89bc",
+      "fetchedAt": "2026-10-10T21:37:11.347Z"
+    },
     "visualstudiocode": {
       "version": "12",
       "color": "117dcd",
@@ -703,6 +775,12 @@
       "color": "FF9800",
       "hash": "sha256:ebd68b1bdb9b7673",
       "fetchedAt": "2026-01-06T23:00:11.668Z"
+    },
+    "xcode": {
+      "version": "16",
+      "color": "147EFB",
+      "hash": "sha256:84f3837988e6fcdb",
+      "fetchedAt": "2026-10-10T21:37:11.990Z"
     },
     "macos": {
       "version": "16",
