@@ -81,6 +81,17 @@ class SkillSet {
   }
 
   /**
+   * Builds a README image path into the generated images directory. The README
+   * is published at the repo root, where the build runs, so the path is
+   * relative to the working directory.
+   */
+  generatedSrc = (...parts: string[]): string =>
+    `./${path.posix.join(
+      path.relative('.', this.#config.generated_output_dir).split(path.sep).join('/'),
+      ...parts
+    )}`;
+
+  /**
    * Escapes special regex characters in a string.
    */
   escapeRegex = (str: string): string => {
@@ -169,6 +180,7 @@ class SkillSet {
         name: topic,
         slug,
         width,
+        cardsBase: this.generatedSrc('cards'),
         alt: cardLabel(topic, names),
         tooltip: cardTooltip(topic, names),
         liveUrl: `${this.#config.cards_live_url}${slug}.svg?v=${version}`,
@@ -216,7 +228,7 @@ class SkillSet {
         size = { width: image.width, height: image.height };
       }
 
-      const src = `./assets/generated/headings/${slug}`;
+      const src = this.generatedSrc('headings', slug);
       lines.push(
         `${hashes} ${emoji}<picture>` +
           `<source media="(prefers-color-scheme: dark)" srcset="${src}-dark.svg">` +

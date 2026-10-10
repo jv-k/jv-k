@@ -12,6 +12,13 @@ import type { SkillSetConfig } from '../src/types/index.js';
 // Test fixtures directory
 const FIXTURES_DIR = path.join(import.meta.dir, 'fixtures');
 
+// README path of the fixtures' generated images, as the generator builds it
+const GENERATED_SRC = `./${path
+  .relative('.', path.join(FIXTURES_DIR, 'output', 'generated'))
+  .split(path.sep)
+  .join('/')}`;
+const escapeRe = (str: string) => str.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&');
+
 // Valid test config
 const createValidConfig = (): SkillSetConfig => ({
   datafile: path.join(FIXTURES_DIR, 'test-skills.yml'),
@@ -187,8 +194,8 @@ describe('SkillSet', () => {
       expect(content).toMatch(
         new RegExp(
           '<a href="https://cdn\\.example\\.com/cards/languages\\.svg\\?v=[0-9a-f]{8}"><picture>' +
-            '<source media="\\(prefers-color-scheme: dark\\)" srcset="\\./assets/generated/cards/languages-dark\\.svg"/>' +
-            '<img src="\\./assets/generated/cards/languages-light\\.svg" width="\\d+" ' +
+            `<source media="\\(prefers-color-scheme: dark\\)" srcset="${escapeRe(GENERATED_SRC)}/cards/languages-dark\\.svg"/>` +
+            `<img src="${escapeRe(GENERATED_SRC)}/cards/languages-light\\.svg" width="\\d+" ` +
             'alt="Languages: JavaScript, TypeScript" title="Languages: JavaScript • TypeScript"/>' +
             '</picture></a>'
         )
@@ -227,8 +234,13 @@ describe('SkillSet', () => {
       ]);
 
       const content = await fs.readFile(config.file_output, 'utf8');
+      const headingsSrc = escapeRe(`${GENERATED_SRC}/headings`);
       expect(content).toMatch(
-        /^## <picture><source media="\(prefers-color-scheme: dark\)" srcset="\.\/assets\/generated\/headings\/h2-footer-dark\.svg"><img src="\.\/assets\/generated\/headings\/h2-footer-light\.svg" width="\d+" height="\d+" alt="Footer" align="absmiddle"><\/picture>$/m
+        new RegExp(
+          `^## <picture><source media="\\(prefers-color-scheme: dark\\)" srcset="${headingsSrc}/h2-footer-dark\\.svg">` +
+            `<img src="${headingsSrc}/h2-footer-light\\.svg" width="\\d+" height="\\d+" alt="Footer" align="absmiddle"></picture>$`,
+          'm'
+        )
       );
     });
 

@@ -85,6 +85,8 @@ export interface SectionTemplateData {
   name: string;
   /** Card file name stem (cards are `<slug>-light.svg` and `<slug>-dark.svg`) */
   slug: string;
+  /** README path of the cards directory, e.g. `./assets/generated/cards` */
+  cardsBase: string;
   /** Card width in px (height follows the SVG's aspect ratio, so cards scale down evenly) */
   width: number;
   /** Alt text naming the category and its skills, comma-separated */
