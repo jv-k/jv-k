@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T21:39:39.494Z",
+  "generatedAt": "2026-10-10T22:06:00.241Z",
   "simpleIconsLatest": "unknown",
   "icons": {
     "typescript": {
@@ -168,7 +168,7 @@
       "version": "custom",
       "color": "333333",
       "hash": "sha256:95d3c3818f54e537",
-      "fetchedAt": "2026-10-10T21:39:39.499Z"
+      "fetchedAt": "2026-10-10T22:06:00.244Z"
     },
     "react": {
       "version": "16",
@@ -216,7 +216,7 @@
       "version": "custom",
       "color": "333333",
       "hash": "sha256:eeff3c1ab4c1ecd9",
-      "fetchedAt": "2026-10-10T21:39:39.500Z"
+      "fetchedAt": "2026-10-10T22:06:00.244Z"
     },
     "gatsby": {
       "version": "16",
@@ -540,7 +540,7 @@
       "version": "custom",
       "color": "FF5D5F",
       "hash": "sha256:2ed7f0b0b70c23ff",
-      "fetchedAt": "2026-10-10T21:39:39.501Z"
+      "fetchedAt": "2026-10-10T22:06:00.245Z"
     },
     "zsh": {
       "version": "16",
@@ -606,7 +606,7 @@
       "version": "custom",
       "color": "412991",
       "hash": "sha256:502ca466ac590033",
-      "fetchedAt": "2026-10-10T21:39:39.501Z"
+      "fetchedAt": "2026-10-10T22:06:00.245Z"
     },
     "pi": {
       "version": "16",
@@ -618,13 +618,13 @@
       "version": "custom",
       "color": "0000F2",
       "hash": "sha256:f8a4eb3b9960b0fb",
-      "fetchedAt": "2026-10-10T21:39:39.502Z"
+      "fetchedAt": "2026-10-10T22:06:00.245Z"
     },
     "kilocode": {
       "version": "custom",
       "color": "FACC15",
       "hash": "sha256:5c37fd5feb6b84b5",
-      "fetchedAt": "2026-10-10T21:39:39.502Z"
+      "fetchedAt": "2026-10-10T22:06:00.245Z"
     },
     "langchain": {
       "version": "16",
@@ -666,7 +666,7 @@
       "version": "custom",
       "color": "333333",
       "hash": "sha256:8aec4a4e56d0fb23",
-      "fetchedAt": "2026-10-10T21:39:39.503Z"
+      "fetchedAt": "2026-10-10T22:06:00.245Z"
     },
     "jupyter": {
       "version": "16",
