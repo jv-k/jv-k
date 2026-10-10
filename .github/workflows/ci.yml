@@ -68,6 +68,7 @@ jobs:
           add: |
             ./readme.md
             ./assets/icons/
+            ./assets/generated/
           push: origin main
 
       - name: Display Results

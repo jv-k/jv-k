@@ -98,6 +98,41 @@ console.log(progress.getCounts()); // { fetched: 80, cached: 15, ... }
 
 ---
 
+### `svg-assets.ts`
+
+SVG images for the README beyond the icons. GitHub strips `style` and `class`
+from README HTML, so each skill category is drawn as an SVG card: images are
+inline, so the cards flow side by side and wrap. An SVG in `<img>` cannot load
+web fonts, follow links or react to hover, so icons are inlined, text is drawn
+as font outlines, and each card links to a live copy of itself that works as a
+page, with per-icon hover and links.
+
+```typescript
+import {
+  renderCard,
+  renderLiveCard,
+  renderHeading,
+  iconName,
+  cardTooltip,
+} from './lib/svg-assets.js';
+
+const style = { font, size: 11, case: 'upper' };
+
+// README card for one theme: dark icons get a light ink on the dark card
+const { svg, width, height } = renderCard('Languages', icons, 'dark', style);
+
+// Live card the README card links to: follows the colour scheme, icons hover and link
+const live = renderLiveCard('Languages', icons, style);
+
+// Page heading at GitHub's size for its level
+const heading = renderHeading('Hi there!', 1, 'light', { font, case: 'upper' });
+
+iconName(iconSvg, 'nodedotjs'); // 'Node.js', from the SVG <title>
+cardTooltip('API', ['GraphQL', 'tRPC']); // 'API: GraphQL • tRPC'
+```
+
+---
+
 ### `skillset.ts`
 
 README template rendering with Pug templates.

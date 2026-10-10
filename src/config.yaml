@@ -3,8 +3,6 @@ default:
     ./src/data/mystack.yml
   tpl_section:
     ./src/templates/section.pug
-  tpl_icon:
-    ./src/templates/icon.pug
   tag_start:
     <!-- START mystack -->
   tag_end:
@@ -19,6 +17,24 @@ default:
   # Local SVG overrides for icons simple-icons lacks (<slug>.svg, takes precedence)
   icons_custom_dir:
     ./assets/icons-custom
+  # Generated images: cards (light, dark and live) and page headings
+  generated_output_dir:
+    ./assets/generated
+  # Public URL of the generated cards: each README card links to its live copy here.
+  # jsDelivr serves the SVG as a page, where links and hover work (GitHub's raw URLs do not)
+  cards_live_url:
+    https://cdn.jsdelivr.net/gh/jv-k/jv-k@main/assets/generated/cards/
+  # Font file (TTF, OTF or WOFF) for card titles and page headings
+  font:
+    ./node_modules/@fontsource/oxanium/files/oxanium-latin-600-normal.woff
+  # Card titles: size in px, case (as-is | upper | lower)
+  cards_title_size:
+    11
+  cards_title_case:
+    upper
+  # Page headings: case (as-is | upper | lower); size follows the heading level
+  headings_case:
+    upper
   icons_manifest_path:
     ./assets/icons/manifest.json
   icons_cdn_base_url:

@@ -177,7 +177,6 @@ export type PackageVersionInfo = z.infer<typeof PackageVersionInfoSchema>;
 export const SkillSetConfigSchema = z.object({
   datafile: z.string().min(1),
   tpl_section: z.string().min(1),
-  tpl_icon: z.string().min(1),
   tag_start: z.string().min(1),
   tag_end: z.string().min(1),
   file_input: z.string().min(1),
@@ -185,6 +184,12 @@ export const SkillSetConfigSchema = z.object({
   // Icon fetcher settings
   icons_output_dir: z.string().min(1),
   icons_custom_dir: z.string().min(1),
+  generated_output_dir: z.string().min(1),
+  font: z.string().min(1),
+  cards_live_url: z.string().url(),
+  cards_title_size: z.number().positive().optional(),
+  cards_title_case: z.enum(['as-is', 'upper', 'lower']).optional(),
+  headings_case: z.enum(['as-is', 'upper', 'lower']).optional(),
   icons_manifest_path: z.string().min(1),
   icons_cdn_base_url: z.string().url(),
   icons_package_api_url: z.string().url(),

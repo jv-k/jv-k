@@ -236,7 +236,6 @@ describe('SkillSetConfigSchema', () => {
   const validConfig = {
     datafile: './src/data/mystack.yml',
     tpl_section: './src/templates/section.pug',
-    tpl_icon: './src/templates/icon.pug',
     tag_start: '<!-- START -->',
     tag_end: '<!-- END -->',
     file_input: './input.md',
@@ -244,6 +243,9 @@ describe('SkillSetConfigSchema', () => {
     // Icon fetcher settings
     icons_output_dir: './assets/icons',
     icons_custom_dir: './assets/icons-custom',
+    generated_output_dir: './assets/generated',
+    font: './fonts/title.woff',
+    cards_live_url: 'https://cdn.example.com/cards/',
     icons_manifest_path: './assets/icons/manifest.json',
     icons_cdn_base_url: 'https://cdn.jsdelivr.net/npm/simple-icons',
     icons_package_api_url: 'https://data.jsdelivr.net/v1/packages/npm/simple-icons',
