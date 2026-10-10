@@ -83,6 +83,9 @@ Skillset:
     - name: playwright
       color: '#2EAD33'
       url: https://playwright.dev/
+    - name: inngest
+      color: '#333'
+      url: https://www.inngest.com/
   'Frontend':
     - name: react
       color: '#61DAFB'
@@ -105,6 +108,9 @@ Skillset:
     - name: shadcnui
       color: '#333'
       url: https://ui.shadcn.com/
+    - name: obra
+      color: '#333'
+      url: https://obra.studio/
     - name: gatsby
       color: '#663399'
       url: https://www.gatsbyjs.com/
@@ -126,6 +132,12 @@ Skillset:
     - name: radixui
       color: '#333'
       url: https://www.radix-ui.com/
+    - name: astro
+      color: '#BC52EE'
+      url: https://astro.build/
+    - name: heroui
+      color: '#333'
+      url: https://www.heroui.com/
   'Cross Platform':
     - name: electron
       color: '#47848F'
@@ -161,6 +173,9 @@ Skillset:
     - name: prettier
       color: '#F7B93E'
       url: https://prettier.io/
+    - name: biome
+      color: '#60A5FA'
+      url: https://biomejs.dev/
   'API':
     - name: graphql
       color: '#E10098'
@@ -174,6 +189,9 @@ Skillset:
     - name: trpc
       color: '#2596BE'
       url: https://trpc.io/
+    - name: stripe
+      color: '#635BFF'
+      url: https://stripe.com/
   'DevOps':
     - name: gnubash
       color: '#4EAA25'
@@ -212,6 +230,12 @@ Skillset:
     - name: supabase
       color: '#3FCF8E'
       url: https://supabase.com/
+    - name: neon
+      color: '#34D59A'
+      url: https://neon.com/
+    - name: drizzle
+      color: '#C5F74F'
+      url: https://orm.drizzle.team/
   'Cloud':
     - name: microsoftazure
       color: '#0078D4'
@@ -253,6 +277,9 @@ Skillset:
     - name: posthog
       color: '#333'
       url: https://posthog.com/
+    - name: langfuse
+      color: '#FF5D5F'
+      url: https://langfuse.com/
   'CLI':
     - name: zsh
       color: '#F15A24'
@@ -263,6 +290,9 @@ Skillset:
     - name: homebrew
       color: '#FBB040'
       url: https://brew.sh/
+    - name: iterm2
+      color: '#333'
+      url: https://iterm2.com/
   'AI Models':
     - name: claude
       color: '#D97757'
@@ -314,6 +344,9 @@ Skillset:
     - name: azuredevops
       color: '#0078D7'
       url: https://ai.azure.com/
+    - name: aisdk
+      color: '#333'
+      url: https://ai-sdk.dev/
   'ML / Data Science':
     - name: jupyter
       color: '#F37626'
@@ -355,6 +388,9 @@ Skillset:
     - name: unity
       color: '#333'
       url: https://unity.com/
+    - name: rive
+      color: '#333'
+      url: https://rive.app/
   Editors:
     - name: visualstudiocode
       color: '#117dcd'
@@ -368,6 +404,9 @@ Skillset:
     - name: sublimetext
       color: '#FF9800'
       url: https://www.sublimetext.com/
+    - name: xcode
+      color: '#147EFB'
+      url: https://developer.apple.com/xcode/
   OS:
     - name: macos
       color: '#333'
